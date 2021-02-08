@@ -1,3 +1,4 @@
+*.tex
 
 # Created by https://www.toptal.com/developers/gitignore/api/latex
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex
@@ -25,9 +26,6 @@
 # *.ps
 # *.eps
 # *.pdf
-
-## Generated if empty string is given at "Please type another file name for output:"
-.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
