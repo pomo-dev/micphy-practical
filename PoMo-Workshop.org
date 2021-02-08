@@ -46,55 +46,104 @@ Basic knowledge of the command line shell of your choice is assumed.
 
 In case you are lost:
 - Have a look at the manual pages, if they exist.
+  #+name: ManLess
   #+begin_src sh :exports code :results none
   man less
   #+end_src
 - Read how commands are used.
+  #+name: HelpLess
   #+begin_src sh :exports code :results none
   less --help
   #+end_src
   
+* Preparation - Download workshop and data
+Option 1: If you have =git= installed, use it.
+#+name: Git
+#+begin_src sh :exports code :results none :eval never
+git clone https://github.com/pomo-dev/micphy-workshop.git
+cd micphy-workshop
+#+end_src
+
+Option 2: Manually download the archive.
+#+begin_src sh :exports code :results none :eval never
+wget https://github.com/pomo-dev/micphy-workshop/archive/master.zip
+unzip master.zip
+cd micphy-workshop-master
+#+end_src
+
+The advantage of Option 1 is that you can update your working tree using =git
+pull= (if I have to change something during the workshop).
+
 * Preparation - Installation of IQ-TREE2
 Option 1: Repository of your Linux distribution. For example, using Arch Linux
 and the Arch User Repository.
-#+begin_src sh :exports code :results none
+#+name: IqTree2InstallFromRepository
+#+begin_src sh :exports code :results none :eval never
 yay -S iqtree
 aura -A iqtree
 #+end_src
+#+beamer: \vspace{1ex}
 
 Option 2: Download the binary executable from the [[http://www.iqtree.org/#download][IQ-TREE2 homepage]]. Make sure
-that you have permission to execute the file, and that the executable is either
-in your =PATH=, or that you give the path during execution.
-#+begin_src sh :exports code :results none
+that you have permission to execute the file (=chmod +x=), and that the
+executable is either in your =PATH=, or that you give the path during execution.
+#+name: IqTree2Test
+#+begin_src sh :exports code :results none :eval never
 iqtree2 --version
 /path/to/iqtree2 --version
 ./relative/path/to/iqtree2 --version
 #+end_src
 
-Option 3: Compile yourself (not shown).
-
 * Preparation - Installation of IQ-TREE2
+Option 3: Compile yourself (not shown).
+#+beamer: \vspace{2ex}
+
+Option 4 for script kiddies or experienced users: Use =nix-shell= and the
+=shell.nix= expression provided in the base directory of the repository.
+
+#+name: NixShell
+#+begin_src sh :exports both :results output verbatim replace
+nix-shell
+#+end_src
+
+#+RESULTS: NixShell
+: Welcome to the MIC-Phy PoMo workshop.
+: The following version of IQ-TREE2 is available:
+: 
+: IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
+: Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+: Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+: 
+
+* Preparation - Test IQ-TREE2 version
 Depending on how you installed IQ-TREE2, please check that the version agrees
 with the one I am using.
-  #+begin_src sh :exports both :results output verbatim replace
-  iqtree2 --version
-  # /path/to/iqtree2 --version
-  # ./relative/path/to/iqtree2 --version
-  #+end_src
 
-  #+RESULTS:
-  : IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
-  : Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
-  : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
-  : 
+#+name: IqTree2Version
+#+begin_src sh :exports both :results output verbatim replace
+iqtree2 --version
+# /path/to/iqtree2 --version
+# ./relative/path/to/iqtree2 --version
+#+end_src
 
-* Preparation - Download of data
-- Test data (download, run normal mode, run PoMo).
+#+RESULTS: IqTree2Version
+: IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
+: Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+: Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+: 
 
-* Exercises
+* Exercise - How to get help
 - How to get help (IQ-TREE).
+
+* Exercise - Run a DNA substitution model
 - Run normal model.
+
+* Exercise - Run PoMo
 - Run PoMo.
+- Find best N.
+- Compare different DNA substitution models.
+- Use gamma rate heterogeneity.
+- Probably perform model test?
 
 * Literature
 :PROPERTIES:
