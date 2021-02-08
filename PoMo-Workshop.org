@@ -28,11 +28,12 @@
 This workshop is [[https://github.com/pomo-dev/micphy-workshop][available on GitHub]].
 #+beamer: \vspace{2ex}
 
-This workshop focuses on understanding and applying polymorphism-aware
-phylogenetic models (PoMo).
+Our goal is to understand polymorphism-aware phylogenetic models (PoMo) and
+learn how to apply PoMo to phylogenetic data.
 #+beamer: \vspace{2ex}
 
-The goal is to infer a phylogenetic tree from a test data set using IQ-TREE2.
+In the course of this workshop, we will infer a phylogenetic tree from a test
+data set using IQ-TREE2.
 #+beamer: \vspace{2ex}
 
 If you need help, please interrupt me anytime!
