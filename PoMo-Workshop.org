@@ -1,0 +1,114 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t
+#+title: Polymorphism-aware phylogenetic models
+#+subtitle: Workshop, MIC-Phy 2021
+#+author: Dominik Schrempf
+#+email: dominik.schrempf@gmail.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.4.4)
+
+#+startup: beamer
+#+latex_class: myPresentation
+#+latex_class_options: [aspectratio=169,minted]
+#+latex_header: \addbibresource{~/Evolutionary-Biology/Bibliography/bibliography.bib}
+#+latex_header_extra: \titlegraphic{\includegraphics[width=10em]{logos/elte}}
+#+latex_compiler: unused; see `org-latex-pdf-process'
+
+#+columns: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+date: February 16, 2021
+#+description:
+#+keywords:
+#+options: H:1
+
+* Introduction
+This workshop focuses on understanding and applying polymorphism-aware
+phylogenetic models (PoMo).
+#+beamer: \vspace{2ex}
+
+The goal is to infer a phylogenetic tree from a test data set using IQ-TREE2.
+#+beamer: \vspace{2ex}
+
+If you need help, please interrupt me anytime!
+
+* Preparation - Command line shell
+Basic knowledge of the command line shell of your choice is assumed.
+- If you do not know basic commands such as =cd=, =ls=, or =less=, just follow
+  the presentation.
+- Otherwise, try to complete the workshop yourself.
+
+In case you are lost:
+- Have a look at the manual pages, if they exist.
+  #+begin_src sh :exports code :results none
+  man less
+  #+end_src
+- Read the usage information of commands.
+  #+begin_src sh :exports code :results none
+  less --help
+  #+end_src
+  
+* Preparation - Installation of IQ-TREE2
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+Option 1: Repository of your Linux distribution. For example, using Arch Linux
+and the Arch User Repository.
+#+begin_src sh :exports code :results none
+yay -S iqtree
+aura -A iqtree
+#+end_src
+
+Option 2: Download the binary executable from the [[http://www.iqtree.org/#download][IQ-TREE2 homepage]]. Make sure
+that you have permission to execute the file, and that the executable is either
+in your =PATH=, or that you give the path during execution.
+#+begin_src sh :exports code :results none
+iqtree2 --version
+/path/to/iqtree2 --version
+./relative/path/to/iqtree2 --version
+#+end_src
+
+Option 3: Compile yourself (not shown).
+
+#+beamer: \framebreak
+Depending on how you installed IQ-TREE2, please check that the version agrees
+with the one I am using.
+  #+begin_src sh :exports both :results output verbatim replace
+  iqtree2 --version
+  # /path/to/iqtree2 --version
+  # ./relative/path/to/iqtree2 --version
+  #+end_src
+
+  #+RESULTS:
+  : IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
+  : Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+  : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+  : 
+
+* Preparation - Download of data
+- IQ-TREE (install, try, how to get help).
+- Test data (download, run normal mode, run PoMo).
+
+* Exercises
+
+* Literature
+:PROPERTIES:
+:ID:       a3a4fe49-79a8-4618-bcae-655485ac54c4
+:END:
+#+attr_latex: :options [Advanced models with PoMo]
+- PoMo :: textcite:DeMaio2015.
+- Reversible PoMo :: textcite:Schrempf2016,Schrempf2017.
+- Advanced models with PoMo :: textcite:Schrempf2019.
+- IQ-TREE2 :: textcite:Minh2020a.
+
+* Bibliography
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+#+begin_export latex
+\printbibliography{}
+#+end_export
