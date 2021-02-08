@@ -1,3 +1,16 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t
+#+title: README
+#+date: <2021-02-08 Mon>
+#+author: Dominik Schrempf
+#+email: dominik.schrempf@gmail.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.4.4)
+
 * Polymorphis-aware phylogenetic models
 This workshop at MIC-Phy 2021 focuses on understanding and applying
 polymorphism-aware phylogenetic models. IQ-TREE2 is used to infer a phylogenetic

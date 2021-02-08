@@ -1,10 +1,4 @@
 
-# Table of Contents
-
-1.  [Polymorphis-aware phylogenetic models](#org09d917c)
-
-
-<a id="org09d917c"></a>
 
 # Polymorphis-aware phylogenetic models
 
