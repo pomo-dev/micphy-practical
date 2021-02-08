@@ -1,0 +1,44 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t
+#+title: Polymorphism-aware phylogenetic models (PoMo)
+#+subtitle: Pracitcal, MIC-Phy 2021
+#+author: Dominik Schrempf
+#+email: dominik.schrempf@gmail.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.4.4)
+
+#+latex_class: myArticle
+#+latex_class_options:
+#+latex_header:
+#+latex_header_extra:
+#+description:
+#+keywords:
+#+subtitle:
+#+latex_compiler: unused; see `org-latex-pdf-process'
+#+date: February 16, 2021
+
+#+latex_header: \addbibresource{~/Evolutionary-Biology/Bibliography/bibliography.bib}
+
+* Literature
+:PROPERTIES:
+:ID:       a3a4fe49-79a8-4618-bcae-655485ac54c4
+:END:
+- PoMo :: textcite:DeMaio2015.
+- Reversible PoMo :: textcite:Schrempf2016,Schrempf2017.
+- Advanced RevPoMo :: textcite:Schrempf2019.
+- IQ-TREE2 :: textcite:Minh2020a.
+
+* Preparation
+- IQ-TREE.
+- Test data.
+
+* Exercises
+
+* Bibliography                                                          :ignore:
+#+begin_export latex
+\printbibliography{}
+#+end_export
