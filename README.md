@@ -1,5 +1,9 @@
-This practical focuses on applying polymorphism-aware phylogenetic models to a
-data set using IQ-TREE2.
 
-Please have a look at the [instructions in PDF](PoMo-Practical.pdf).
+# Polymorphis-aware phylogenetic models
+
+This workshop at MIC-Phy 2021 focuses on understanding and applying
+polymorphism-aware phylogenetic models. IQ-TREE2 is used to infer a phylogenetic
+tree from a test data set.
+
+Please have a look at the [detailed instructions](PoMo-Practical.pdf).
 
