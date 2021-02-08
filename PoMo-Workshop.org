@@ -25,6 +25,9 @@
 #+options: H:1
 
 * Introduction
+This workshop is [[https://github.com/pomo-dev/micphy-workshop][available on GitHub]].
+#+beamer: \vspace{2ex}
+
 This workshop focuses on understanding and applying polymorphism-aware
 phylogenetic models (PoMo).
 #+beamer: \vspace{2ex}
@@ -45,16 +48,12 @@ In case you are lost:
   #+begin_src sh :exports code :results none
   man less
   #+end_src
-- Read the usage information of commands.
+- Read how commands are used.
   #+begin_src sh :exports code :results none
   less --help
   #+end_src
   
 * Preparation - Installation of IQ-TREE2
-:PROPERTIES:
-:BEAMER_opt: allowframebreaks
-:END:
-
 Option 1: Repository of your Linux distribution. For example, using Arch Linux
 and the Arch User Repository.
 #+begin_src sh :exports code :results none
@@ -73,7 +72,7 @@ iqtree2 --version
 
 Option 3: Compile yourself (not shown).
 
-#+beamer: \framebreak
+* Preparation - Installation of IQ-TREE2
 Depending on how you installed IQ-TREE2, please check that the version agrees
 with the one I am using.
   #+begin_src sh :exports both :results output verbatim replace
@@ -89,10 +88,12 @@ with the one I am using.
   : 
 
 * Preparation - Download of data
-- IQ-TREE (install, try, how to get help).
 - Test data (download, run normal mode, run PoMo).
 
 * Exercises
+- How to get help (IQ-TREE).
+- Run normal model.
+- Run PoMo.
 
 * Literature
 :PROPERTIES:
