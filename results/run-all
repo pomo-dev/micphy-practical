@@ -1,27 +1,40 @@
 #!/usr/bin/env bash
 
-NS=(3 5 7 9 15 19)
-GS=(2 4)
 FILES=("fruit_flies_1000.cf" "fruit_flies_10000.cf")
+NS=(3 5 7 9 15 19)
+GS=(1 2 4)
+NT=8
+
+normal() {
+    f=$1
+    n=$2
+    g=$3
+    if [[ $g -eq 1 ]]
+    then
+        m="HKY+F+P+N${n}"
+    else
+        m="HKY+F+P+N${n}+G${g}"
+    fi
+    echo iqtree2 -nt ${NT} -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
+}
+export -f normal
+
+bootstrap() {
+    f=$1
+    n=$2
+    g=$3
+    if [[ $g -eq 1 ]]
+    then
+        m="HKY+F+P+N${n}"
+    else
+        m="HKY+F+P+N${n}+G${g}"
+    fi
+    echo iqtree2 -nt ${NT} -redo -s "../data/${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
+}
+export -f bootstrap
 
 # Normal runs.
-for f in "${FILES[@]}"
-do
-    for n in "${NS[@]}"
-    do
-        m="HKY+F+P+N${n}"
-        iqtree2 -nt 8 -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
-        for g in "${GS[@]}"
-        do
-            m="HKY+F+P+N${n}+G${g}"
-            iqtree2 -nt 8 -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
-        done
-    done
-done
+parallel -j 4 normal {1} {2} {3} ::: "${FILES[@]}" ::: "${NS[@]}" ::: "${GS[@]}"
 
-# Bootstrap runs with N9 and G4.
-for f in "${FILES[@]}"
-do
-    m="HKY+F+P+N9+G4"
-    iqtree2 -nt 8 -redo -s "../data/${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
-done
+# Bootstrap runs.
+parallel -j 4 bootstrap {1} {2} {3} ::: "${FILES[@]}" ::: "${NS[@]}" ::: "${GS[@]}"
