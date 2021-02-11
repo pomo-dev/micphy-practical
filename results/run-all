@@ -3,7 +3,8 @@
 FILES=("fruit_flies_1000.cf" "fruit_flies_10000.cf")
 NS=(3 5 7 9 15 19)
 GS=(1 2 4)
-NT=8
+
+export NT=8
 
 normal() {
     f=$1
