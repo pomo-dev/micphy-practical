@@ -1,0 +1,31 @@
+Pop,Country,Locality,Continent,Cont,Date ,Latitude,Longitude ,Elevation,Samples
+AUS,Australia,Sorell TAS,Oceania,OC,2004,-42.77,147.56,18,18
+CHB,China,Beijing,Asia,AS,9/1992,39.91,116.41,52,15
+CO,Cameroon,Oku,Africa,EA,4/2004,6.25,10.43,2169,10
+EA,Ethiopia,Gambella,Africa,EA,12/2011,8.25,34.59,525,24
+EB,Ethiopia,Bonga,Africa,EA,12/2011,7.26,36.25,1725,5
+ED,Ethiopia,Dodola,Africa,EA,12/2008,6.98,39.18,2492,5
+EF,Ethiopia,Fiche,Africa,EA,12/2011,9.81,38.63,3070,69
+EG,Egypt,Cairo,Europe / N. Africa,ENA,1/2011,30.10,31.32,25,32
+ER,Ethiopia,Debre Birhan,Africa,EA,12/2011,9.68,39.53,2840,5
+EZ,Ethiopia,Ziway,Africa,EA,12/2008,7.93,38.72,1642,4
+FR,France,Lyon,Europe / N. Africa,ENA,7/2010,45.77,4.86,175,96
+GA,Gabon,Franceville,Africa,EA,3/2002,-1.65,13.60,332,10
+GU,Guinea,Dondé,Africa,EA,6/2005,10.70,-12.25,801,5
+KN,Kenya,Nyahururu,Africa,EA,1/2009,0.04,36.36,2303,5
+KR,Kenya,Marigat,Africa,EA,1/2009,0.47,35.98,1062,4
+MW,Malawi,-,Africa,SA,2001,-,-,-,9
+NG,Nigeria,Maiduguri,Africa,EA,9/2004,11.85,13.16,295,6
+NTH,Netherlands,Houten,Europe / N. Africa,ENA,1998,52.02,5.10,4,19
+RAL,United States,Raleigh NC,America,AM ,2003,35.76,-78.66,91,205
+RG,Rwanda,Gikongoro,Africa,EA,12/2008,-2.49,28.92,1927,27
+SB,South Africa,Barkly East,Africa,SA,12/2011,-30.97,27.59,1800,5
+SD,South Africa,Dullstroom,Africa,SA,12/2011,-25.42,30.10,2000,81
+SF,South Africa,Fouriesburg,Africa,SA,12/2011,-28.60,28.05,1800,5
+SP,South Africa,Phalaborwa,Africa,SA,7/2010,-23.94,31.14,350,37
+UG,Uganda,Namulonge,Africa,EA,4/2005,0.53,32.60,1134,4
+UK,Uganda,Kisoro,Africa,EA,1/2012,-1.28,29.69,1925,5
+USI,United States,Ithaca NY,America,AM ,2004,42.35,-76.57,344,19
+USW,United States,Winters CA,America,AM ,1998,38.53,-121.97,41,35
+ZI,Zambia,Siavonga,Africa,SA,7/2010,-16.54,28.72,530,197
+ZS,Zimbabwe,Sengwa,Africa,SA,9/1990,-18.16,28.22,865,5
