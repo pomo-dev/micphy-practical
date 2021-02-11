@@ -1,0 +1,155 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meganeura (AVX2, FMA3, 31 GB RAM)
+Command: iqtree2 -nt 4 -redo -s ../data/fruit_flies_10000.cf -m HKY+F+P+N07 -B 1000 -pre fruit_flies_10000.cf.HKY+F+P+N07.ufboot
+Seed:    420020 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Feb 11 16:18:55 2021
+Kernel:  AVX+FMA - 4 threads (16 CPU cores detected)
+
+Reading alignment file ../data/fruit_flies_10000.cf ... Counts format (PoMo) detected
+
+----------------------------------------------------------------------
+Number of populations:     9
+Number of sites:           10000
+---
+Normal sites:              10000
+Sites with unknown states: 0
+Total sites read:          10000
+Fails:                     0
+---
+Compound states:           1346
+----------------------------------------------------------------------
+
+The average number of samples is 18.998
+Alignment has 9 sequences with 10000 columns, 7463 distinct patterns
+0 parsimony-informative, 444 singleton sites, 9556 constant sites
+NOTE: The composition test for PoMo only tests the proportion of fixed states!
+     Gap/Ambiguity  Composition  p-value
+   1  NTH    0.00%    passed    100.00%
+   2  EG     0.00%    passed     99.95%
+   3  FR     0.00%    passed     99.55%
+   4  GA     0.00%    passed     99.42%
+   5  GU     0.00%    passed     99.64%
+   6  EF     0.00%    passed     99.90%
+   7  KN     0.00%    passed     99.99%
+   8  SB     0.00%    passed     99.94%
+   9  SP     0.00%    passed     99.49%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is increased to 0.000049000000 because PoMo infers number of mutations and frequency shifts
+NOTE: maximal branch length is increased to 490.0 because PoMo infers number of mutations and frequency shifts
+Creating fast initial parsimony tree by random order stepwise addition...
+0.001 seconds, parsimony score: 30 (based on 444 sites)
+Generating 1000 samples for ultrafast bootstrap (seed: 420020)...
+
+NOTE: 49 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -29134.762
+2. Current log-likelihood: -23899.342
+3. Current log-likelihood: -23859.198
+Optimal log-likelihood: -23859.133
+PoMo with N=7 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 40 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00278  A-G: 0.00621  A-T: 0.00359  C-G: 0.00282  C-T: 0.00792  G-T: 0.00359
+Exchangeabilities:  A-C: 0.01278  A-G: 0.02820  A-T: 0.01278  C-G: 0.01278  C-T: 0.02820  G-T: 0.01278
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0129
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+Parameters optimization took 3 rounds (4.1135 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.008859 sec (of wall-clock time) 0.031426 sec(of CPU time)
+Computing RapidNJ tree took 0.000617 sec (of wall-clock time) 0.001838 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -23782.109
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.024 second
+Computing log-likelihood of 98 initial trees ... 7.445 seconds
+Current best score: -23782.109
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -23778.312
+Iteration 10 / LogL: -23778.312 / Time: 0h:0m:25s
+Iteration 20 / LogL: -23778.314 / Time: 0h:0m:38s
+Finish initializing candidate tree set (8)
+Current best tree score: -23778.312 / CPU time: 33.953
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -23789.721 / Time: 0h:0m:47s (0h:1m:55s left)
+UPDATE BEST LOG-LIKELIHOOD: -23778.311
+Iteration 40 / LogL: -23789.713 / Time: 0h:0m:55s (0h:1m:26s left)
+Iteration 50 / LogL: -23783.696 / Time: 0h:1m:4s (0h:1m:6s left)
+Log-likelihood cutoff on original alignment: -23818.156
+Iteration 60 / LogL: -23778.889 / Time: 0h:1m:13s (0h:0m:50s left)
+Iteration 70 / LogL: -23789.689 / Time: 0h:1m:22s (0h:0m:36s left)
+Iteration 80 / LogL: -23778.321 / Time: 0h:1m:30s (0h:0m:23s left)
+Iteration 90 / LogL: -23822.749 / Time: 0h:1m:38s (0h:0m:12s left)
+Iteration 100 / LogL: -23778.338 / Time: 0h:1m:47s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -23818.156
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:1m:48s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -23778.311
+Optimal log-likelihood: -23778.303
+PoMo with N=7 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 40 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00282  A-G: 0.00633  A-T: 0.00364  C-G: 0.00285  C-T: 0.00807  G-T: 0.00364
+Exchangeabilities:  A-C: 0.01295  A-G: 0.02874  A-T: 0.01295  C-G: 0.01295  C-T: 0.02874  G-T: 0.01295
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0131
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+Parameters optimization took 1 rounds (0.5166 sec)
+BEST SCORE FOUND : -23778.3034
+Creating bootstrap support values...
+Split supports printed to NEXUS file fruit_flies_10000.cf.HKY+F+P+N07.ufboot.splits.nex
+Total tree length: 0.3258
+
+Total number of iterations: 102
+CPU time used for tree search: 412.3962 sec (0h:6m:52s)
+Wall-clock time used for tree search: 103.8315 sec (0h:1m:43s)
+Total CPU time used: 433.1683 sec (0h:7m:13s)
+Total wall-clock time used: 109.0745 sec (0h:1m:49s)
+
+Computing bootstrap consensus tree...
+Reading input file fruit_flies_10000.cf.HKY+F+P+N07.ufboot.splits.nex...
+9 taxa and 37 splits.
+Consensus tree written to fruit_flies_10000.cf.HKY+F+P+N07.ufboot.contree
+Reading input trees file fruit_flies_10000.cf.HKY+F+P+N07.ufboot.contree
+Log-likelihood of consensus tree: -23778.3034
+
+Analysis results written to: 
+  IQ-TREE report:                fruit_flies_10000.cf.HKY+F+P+N07.ufboot.iqtree
+  Maximum-likelihood tree:       fruit_flies_10000.cf.HKY+F+P+N07.ufboot.treefile
+  Likelihood distances:          fruit_flies_10000.cf.HKY+F+P+N07.ufboot.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          fruit_flies_10000.cf.HKY+F+P+N07.ufboot.splits.nex
+  Consensus tree:                fruit_flies_10000.cf.HKY+F+P+N07.ufboot.contree
+  Screen log file:               fruit_flies_10000.cf.HKY+F+P+N07.ufboot.log
+
+Date and Time: Thu Feb 11 16:20:44 2021
