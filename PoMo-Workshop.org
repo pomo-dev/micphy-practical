@@ -173,9 +173,6 @@ GENERAL OPTIONS:
   -s DIR               Directory of alignment files
 #+end_example
 
-* Exercise - Run a DNA substitution model
-- Run normal model.
-
 * Fruit fly data
 Data from [[https://popfly.uab.cat][PopFly]][fn:1]. 9 populations with an average number of samples per
 population of approximately 19, and an estimated heterozygosity of 0.0109:
@@ -190,6 +187,10 @@ population of approximately 19, and an estimated heterozygosity of 0.0109:
 - SP :: South Africa (Phalaborwa)
  
 /Why is it important to check the heterozygosity?/
+
+* Exercise - DNA substitution model
+Before running PoMo, we will use a normal DNA substitution model.
+
 
 * Exercise - Run PoMo
 #+name: IqTree2Run
@@ -212,7 +213,10 @@ iqtree2 -nt 4 -redo -s data/fruit_flies_1000.cf -m HKY+P+N9 -pre fruit_flies_100
 * Tips
 Numerical underflow: The likelihood derivate is zero or close to zero; this is
 especially an issue when N is large; try using =-safe= (which is slower).
-Sometimes, retrying with a different seed also fixes the problem.
+
+Sometimes, the algorithm diverges and the analysis has to be repeated with a
+different seed. In general, it is recommended to perform replicate analyses and
+compare the parameters and log likelihoods.
 
 * Literature
 :PROPERTIES:
