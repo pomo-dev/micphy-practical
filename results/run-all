@@ -10,11 +10,11 @@ do
     for n in "${NS[@]}"
     do
         m="HKY+F+P+N${n}"
-        iqtree2 -nt 4 -redo -s "${f}" -m "${m}" -pre "${f}.${m}"
+        iqtree2 -nt 8 -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
         for g in "${GS[@]}"
         do
             m="HKY+F+P+N${n}+G${g}"
-            iqtree2 -nt 4 -redo -s "${f}" -m "${m}" -pre "${f}.${m}"
+            iqtree2 -nt 8 -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
         done
     done
 done
@@ -23,5 +23,5 @@ done
 for f in "${FILES[@]}"
 do
     m="HKY+F+P+N9+G4"
-    iqtree2 -nt 4 -redo -s "${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
+    iqtree2 -nt 8 -redo -s "../data/${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
 done
