@@ -1,0 +1,165 @@
+IQ-TREE 2.1.2 COVID-edition built Oct 22 2020
+
+Input file name: ../data/fruit_flies_10000.cf
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 664741
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+For polymorphism-aware models please cite:
+
+Dominik Schrempf, Bui Quang Minh, Nicola De Maio, Arndt von Haeseler, and Carolin Kosiol
+(2016) Reversible polymorphism-aware phylogenetic models and their application to
+tree inference. J. Theor. Biol., 407:362–370.
+https://doi.org/10.1016/j.jtbi.2016.07.042
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 9 sequences with 10000 PoMo sites
+Number of constant sites: 9525 (= 95.25% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 9525 (= 95.25% of all sites)
+Number of parsimony informative sites: 0
+Number of distinct site patterns: 7463
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: HKY+F+P+N9+G2
+
+PoMo with N=9 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 52 states in total;Gamma with 2 categories
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00256  A-G: 0.00574  A-T: 0.00330  C-G: 0.00259  C-T: 0.00732  G-T: 0.00330
+Exchangeabilities:  A-C: 0.01176  A-G: 0.02605  A-T: 0.01176  C-G: 0.01176  C-T: 0.02605  G-T: 0.01176
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0119
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+Model of rate heterogeneity: Gamma with 2 categories
+Gamma shape alpha: 46.6729
+
+ Category  Relative_rate  Proportion
+  1         0.8836         0.5000
+  2         1.1164         0.5000
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+Model of rate heterogeneity: Uniform
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -23339.2652 (s.e. 385.7780)
+Unconstrained log-likelihood (without tree): -87859.4953
+Number of free parameters (#branches + #model parameters): 21
+Akaike information criterion (AIC) score: 46720.5304
+Corrected Akaike information criterion (AICc) score: 46720.6230
+Bayesian information criterion (BIC) score: 46871.9475
+
+NOTE: The branch lengths of PoMo measure mutations and frequency shifts.
+To compare PoMo branch lengths to DNA substitution models use the tree length
+measured in substitutions per site.
+
+PoMo branch length = Substitution model branch length * N * N.
+
+Total tree length (sum of branch lengths)
+ - measured in number of mutations and frequency shifts per site: 0.4507
+ - measured in number of substitutions per site (divided by N^2): 0.0056
+Sum of internal branch lengths
+- measured in mutations and frequency shifts per site: 0.1166 (25.8596% of tree length)
+- measured in substitutions per site: 0.0014 (25.8596% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'NTH' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-------NTH
+|
+|  +-----EG
++--| (93)
+|  |                  +---------GA
+|  |            +-----| (89)
+|  |            |     |      +-------------GU
+|  |            |     |  +---| (77)
+|  |            |     |  |   +----------------------------EF
+|  |            |     +--| (54)
+|  |            |        |      +---------SB
+|  |            |        +------| (91)
+|  |            |               +-----------SP
+|  +------------| (100)
+|               +-------KN
+|
++---------FR
+
+Tree in newick format: (measured in mutations and frequency shifts)
+
+(NTH:0.0254181277,(EG:0.0193306592,((GA:0.0312030177,((GU:0.0428050006,EF:0.0882558948)77:0.0143696564,(SB:0.0328659732,SP:0.0371761421)91:0.0226776923)54:0.0077798118)89:0.0207379796,KN:0.0257046552)100:0.0394649020)93:0.0115228923,FR:0.0314011204);
+
+Tree in newick format (measured in substitutions, see above):
+WARNING: Only for comparison with substitution models.
+         These are NOT the branch lengths inferred by PoMo.
+
+(NTH:0.0003138040,(EG:0.0002386501,((GA:0.0003852224,((GU:0.0005284568,EF:0.0010895789)77:0.0001774032,(SB:0.0004057528,SP:0.0004589647)91:0.0002799715)54:0.0000960471)89:0.0002560244,KN:0.0003173414)100:0.0004872210)93:0.0001422579,FR:0.0003876682);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -23339.265110
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------NTH
+|
+|  +-----EG
++--| (93)
+|  |                  +---------GA
+|  |            +-----| (89)
+|  |            |     |      +-------------GU
+|  |            |     |  +---| (77)
+|  |            |     |  |   +----------------------------EF
+|  |            |     +--| (54)
+|  |            |        |      +---------SB
+|  |            |        +------| (91)
+|  |            |               +-----------SP
+|  +------------| (100)
+|               +-------KN
+|
++---------FR
+
+
+Consensus tree in newick format: 
+
+(NTH:0.0254751691,(EG:0.0193238673,((GA:0.0312712940,((GU:0.0427253924,EF:0.0882204396)77:0.0143998863,(SB:0.0328884471,SP:0.0371159353)91:0.0226294541)54:0.0078608319)89:0.0206643384,KN:0.0257661121)100:0.0395576640)93:0.0115647169,FR:0.0313890380);
+
+TIME STAMP
+----------
+
+Date and time: Thu Feb 11 16:26:49 2021
+Total CPU time used: 1327.674174 seconds (0h:22m:7s)
+Total wall-clock time used: 335.6875091 seconds (0h:5m:35s)
+

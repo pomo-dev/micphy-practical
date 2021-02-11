@@ -16,7 +16,7 @@ normal() {
     else
         m="HKY+F+P+N${n}+G${g}"
     fi
-    iqtree2 -nt ${NT} -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
+    echo iqtree2 -nt ${NT} -redo -s "../data/${f}" -m "${m}" -pre "${f}.${m}"
 }
 export -f normal
 
@@ -30,7 +30,7 @@ bootstrap() {
     else
         m="HKY+F+P+N${n}+G${g}"
     fi
-    iqtree2 -nt ${NT} -redo -s "../data/${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
+    echo iqtree2 -nt ${NT} -redo -s "../data/${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
 }
 export -f bootstrap
 

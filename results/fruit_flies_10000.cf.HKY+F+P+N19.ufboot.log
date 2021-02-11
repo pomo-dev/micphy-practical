@@ -1,0 +1,323 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meganeura (AVX2, FMA3, 31 GB RAM)
+Command: iqtree2 -nt 4 -redo -s ../data/fruit_flies_10000.cf -m HKY+F+P+N19 -B 1000 -pre fruit_flies_10000.cf.HKY+F+P+N19.ufboot
+Seed:    757300 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Feb 11 16:27:17 2021
+Kernel:  AVX+FMA - 4 threads (16 CPU cores detected)
+
+Reading alignment file ../data/fruit_flies_10000.cf ... Counts format (PoMo) detected
+
+----------------------------------------------------------------------
+Number of populations:     9
+Number of sites:           10000
+---
+Normal sites:              10000
+Sites with unknown states: 0
+Total sites read:          10000
+Fails:                     0
+---
+Compound states:           1346
+----------------------------------------------------------------------
+
+The average number of samples is 18.998
+Alignment has 9 sequences with 10000 columns, 7463 distinct patterns
+0 parsimony-informative, 594 singleton sites, 9406 constant sites
+NOTE: The composition test for PoMo only tests the proportion of fixed states!
+     Gap/Ambiguity  Composition  p-value
+   1  NTH    0.00%    passed     99.97%
+   2  EG     0.00%    passed     99.95%
+   3  FR     0.00%    passed     99.82%
+   4  GA     0.00%    passed     99.90%
+   5  GU     0.00%    passed     99.62%
+   6  EF     0.00%    passed     99.87%
+   7  KN     0.00%    passed     99.81%
+   8  SB     0.00%    passed     99.74%
+   9  SP     0.00%    passed     98.77%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: minimal branch length is increased to 0.000361000000 because PoMo infers number of mutations and frequency shifts
+NOTE: maximal branch length is increased to 3610.0 because PoMo infers number of mutations and frequency shifts
+Creating fast initial parsimony tree by random order stepwise addition...
+0.001 seconds, parsimony score: 30 (based on 594 sites)
+Generating 1000 samples for ultrafast bootstrap (seed: 757300)...
+
+NOTE: 88 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -29216.809
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00191  A-G: 0.00193  A-T: 0.00246  C-G: 0.00193  C-T: 0.00246  G-T: 0.00246
+Exchangeabilities:  A-C: 0.00875  A-G: 0.00875  A-T: 0.00875  C-G: 0.00875  C-T: 0.00875  G-T: 0.00875
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0064
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+2. Current log-likelihood: -23047.6541
+3. Current log-likelihood: -22936.0365
+4. Current log-likelihood: -22925.5970
+5. Current log-likelihood: -22921.8644
+6. Current log-likelihood: -22921.2537
+Optimal log-likelihood: -22921.1493
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01962  A-T: 0.00894  C-G: 0.00894  C-T: 0.01962  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+Parameters optimization took 6 rounds (58.8926 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.150941 sec (of wall-clock time) 0.599120 sec(of CPU time)
+Computing RapidNJ tree took 0.000599 sec (of wall-clock time) 0.002372 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -22928.448
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.036 second
+Computing log-likelihood of 98 initial trees ... 45.158 seconds
+Current best score: -22921.149
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -22812.725
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -22803.214
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -22799.626
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+Iteration 10 / LogL: -22819.6044 / Time: 0h:3m:31s
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+Iteration 20 / LogL: -22812.9067 / Time: 0h:5m:1s
+Finish initializing candidate tree set (6)
+Current best tree score: -22799.6256 / CPU time: 238.6905
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -22804.4967 / Time: 0h:5m:55s (0h:14m:55s left)
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+Iteration 40 / LogL: -22799.8715 / Time: 0h:7m:1s (0h:11m:21s left)
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+Iteration 50 / LogL: -22799.8795 / Time: 0h:8m:7s (0h:8m:47s left)
+Log-likelihood cutoff on original alignment: -22830.2416
+Iteration 60 / LogL: -22799.9739 / Time: 0h:9m:11s (0h:6m:42s left)
+UPDATE BEST LOG-LIKELIHOOD: -22799.6256
+Iteration 70 / LogL: -22803.9829 / Time: 0h:10m:9s (0h:4m:51s left)
+Iteration 80 / LogL: -22799.6557 / Time: 0h:11m:12s (0h:3m:15s left)
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+Iteration 90 / LogL: -22799.7595 / Time: 0h:12m:25s (0h:1m:48s left)
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00195  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00551  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00894  A-G: 0.01961  A-T: 0.00894  C-G: 0.00894  C-T: 0.01961  G-T: 0.00894
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+WARNING: Numerical underflow for lh-derivative
+Iteration 100 / LogL: -22799.6297 / Time: 0h:13m:28s (0h:0m:24s left)
+Log-likelihood cutoff on original alignment: -22830.2416
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.9997
+TREE SEARCH COMPLETED AFTER 104 ITERATIONS / Time: 0h:13m:51s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.0100)
+1. Initial log-likelihood: -22799.6256
+2. Current log-likelihood: -22799.5954
+Optimal log-likelihood: -22799.5940
+PoMo with N=19 and HKY (Hasegawa, Kishino and Yano, 1985) mutation model; Sampling method: Weighted binomial; 112 states in total;
+
+--
+Model parameters.
+Mutation    rates:  A-C: 0.00194  A-G: 0.00432  A-T: 0.00251  C-G: 0.00197  C-T: 0.00550  G-T: 0.00251
+Exchangeabilities:  A-C: 0.00893  A-G: 0.01960  A-T: 0.00893  C-G: 0.00893  C-T: 0.01960  G-T: 0.00893
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Estimated heterozygosity: 0.0090
+A slight overestimation is expected and an effect of weighted binomial sampling; see manual.
+--
+Empirical quantities.
+Base frequencies:  A: 0.281  C: 0.218  G: 0.220  T: 0.281
+Watterson's estimator of heterozygosity: 0.0064
+--
+
+Parameters optimization took 2 rounds (10.4286 sec)
+BEST SCORE FOUND : -22799.5940
+Creating bootstrap support values...
+Split supports printed to NEXUS file fruit_flies_10000.cf.HKY+F+P+N19.ufboot.splits.nex
+Total tree length: 1.3594
+
+Total number of iterations: 104
+CPU time used for tree search: 3041.4952 sec (0h:50m:41s)
+Wall-clock time used for tree search: 768.9152 sec (0h:12m:48s)
+Total CPU time used: 3333.1200 sec (0h:55m:33s)
+Total wall-clock time used: 842.3455 sec (0h:14m:2s)
+
+Computing bootstrap consensus tree...
+Reading input file fruit_flies_10000.cf.HKY+F+P+N19.ufboot.splits.nex...
+9 taxa and 40 splits.
+Consensus tree written to fruit_flies_10000.cf.HKY+F+P+N19.ufboot.contree
+Reading input trees file fruit_flies_10000.cf.HKY+F+P+N19.ufboot.contree
+Log-likelihood of consensus tree: -22799.5944
+
+Analysis results written to: 
+  IQ-TREE report:                fruit_flies_10000.cf.HKY+F+P+N19.ufboot.iqtree
+  Maximum-likelihood tree:       fruit_flies_10000.cf.HKY+F+P+N19.ufboot.treefile
+  Likelihood distances:          fruit_flies_10000.cf.HKY+F+P+N19.ufboot.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          fruit_flies_10000.cf.HKY+F+P+N19.ufboot.splits.nex
+  Consensus tree:                fruit_flies_10000.cf.HKY+F+P+N19.ufboot.contree
+  Screen log file:               fruit_flies_10000.cf.HKY+F+P+N19.ufboot.log
+
+Date and Time: Thu Feb 11 16:41:23 2021
