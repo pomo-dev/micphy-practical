@@ -34,7 +34,6 @@ mkShell {
     shellHook = ''
       echo "Welcome to the MIC-Phy PoMo workshop."
       echo "The following version of IQ-TREE2 is available:"
-      echo
       iqtree2 --version
     '';
 }
