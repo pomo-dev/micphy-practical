@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+NS=(3 5 7 9 15 19)
+GS=(2 4)
+FILES=("fruit_flies_1000.cf" "fruit_flies_10000.cf")
+
+# Normal runs.
+for f in "${FILES[@]}"
+do
+    for n in "${NS[@]}"
+    do
+        m="HKY+F+P+N${n}"
+        iqtree2 -nt 4 -redo -s "${f}" -m "${m}" -pre "${f}.${m}"
+        for g in "${GS[@]}"
+        do
+            m="HKY+F+P+N${n}+G${g}"
+            iqtree2 -nt 4 -redo -s "${f}" -m "${m}" -pre "${f}.${m}"
+        done
+    done
+done
+
+# Bootstrap runs with N9 and G4.
+for f in "${FILES[@]}"
+do
+    m="HKY+F+P+N9+G4"
+    iqtree2 -nt 4 -redo -s "${f}" -m "${m}" -B 1000 -pre "${f}.${m}.ufboot"
+done
