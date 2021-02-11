@@ -28,21 +28,25 @@
 This workshop is [[https://github.com/pomo-dev/micphy-workshop][available on GitHub]].
 #+beamer: \vspace{2ex}
 
-Our goal is to understand polymorphism-aware phylogenetic models (PoMo) and
-learn how to apply PoMo to phylogenetic data.
+Our goal is to understand how we can use polymorphism-aware phylogenetic models
+(PoMo) to improve inferences from population data.
 #+beamer: \vspace{2ex}
 
-In the course of this workshop, we will infer a phylogenetic tree from a test
-data set using IQ-TREE2.
+In the course of this workshop, we will infer a phylogenetic tree from test data
+using IQ-TREE2.
 #+beamer: \vspace{2ex}
 
 If you need help, please interrupt me anytime!
 
 * Preparation - Command line shell
+:PROPERTIES:
+:ID:       c1b7587a-de6c-4d16-92e5-722e3c089594
+:END:
 Basic knowledge of the command line shell of your choice is assumed.
-- If you do not know basic commands such as =cd=, =ls=, or =less=, just follow
-  the presentation.
-- Otherwise, try to complete the workshop yourself.
+- If you do not know basic commands such as =cd=, =ls=, or =less=, just lean
+  back and listen to the presentation.
+- Otherwise, try to follow the steps and complete the workshop yourself.
+#+beamer: \vspace{1ex}
 
 In case you are lost:
 - Have a look at the manual pages, if they exist.
@@ -58,13 +62,14 @@ In case you are lost:
   
 * Preparation - Download workshop and data
 Option 1: If you have =git= installed, use it.
-#+name: Git
+#+name: Workshop-Git
 #+begin_src sh :exports code :results none :eval never
 git clone https://github.com/pomo-dev/micphy-workshop.git
 cd micphy-workshop
 #+end_src
 
-Option 2: Manually download the archive.
+Option 2: Manually download the archive (requires =wget=, and =unzip=).
+#+name: Workshop-ManualDownload
 #+begin_src sh :exports code :results none :eval never
 wget https://github.com/pomo-dev/micphy-workshop/archive/master.zip
 unzip master.zip
@@ -72,71 +77,101 @@ cd micphy-workshop-master
 #+end_src
 
 The advantage of Option 1 is that you can:
-- update your working tree using =git pull= (if I have to change something
-  during the workshop);
-- reset to the initial state in case you mess something up with =git reset
-  --hard HEAD= (be careful, this erases all uncommited changes made by you).
+- update your working tree if I have to change something during the workshop;
+  use =git pull=;
+- reset to the initial state if you mess up; use =git reset --hard HEAD= (be
+  careful, this erases all changes made by you).
 
-* Preparation - IQ-TREE2: Installation
-Option 1: Repository of your Linux distribution. For example, using Arch Linux
-and the Arch User Repository.
-#+name: IqTree2InstallFromRepository
+* Preparation - Install IQ-TREE2
+Option 1: Install from the repository of your distribution. For example, use the
+Arch Linux User Repository.
+#+name: IqTree2-InstallFromRepository
 #+begin_src sh :exports code :results none :eval never
 yay -S iqtree
 aura -A iqtree
 #+end_src
-#+beamer: \vspace{1ex}
 
-Option 2: Download the binary executable from the [[http://www.iqtree.org/#download][IQ-TREE2 homepage]]. Make sure
-that you have permission to execute the file (=chmod +x=), and that the
-executable is either in your =PATH=, or that you give the path during execution.
-#+name: IqTree2Test
-#+begin_src sh :exports code :results none :eval never
-iqtree2 --version
-/path/to/iqtree2 --version
-./relative/path/to/iqtree2 --version
-#+end_src
-
-* Preparation - IQ-TREE2: Installation
-Option 3: Compile yourself (not shown).
+Option 2: Compile yourself (not shown).
 #+beamer: \vspace{2ex}
 
-Option 4 for script kiddies or experienced users: Use =nix-shell= and the
-=shell.nix= expression provided in the base directory of the repository.
+Option 3: Use =nix-shell= and the =shell.nix= expression provided in the base
+directory of the repository (requires =nix=).
 
-#+name: NixShell
+#+name: IqTree2-NixShell
 #+begin_src sh :exports both :results output verbatim replace
 nix-shell
 #+end_src
 
-#+RESULTS: NixShell
+#+latex: {\footnotesize
+#+RESULTS: IqTree2-NixShell
 : Welcome to the MIC-Phy PoMo workshop.
 : The following version of IQ-TREE2 is available:
-: 
 : IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
 : Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
 : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 : 
+#+latex: }
 
-* Preparation - IQ-TREE2: Test version
+* Preparation - Install IQ-TREE2
+
+Option 4: Download the binary executable from the [[http://www.iqtree.org/#download][IQ-TREE2 homepage]].
+#+name: IqTree2-ManualDownload
+#+begin_src sh :exports code :eval never 
+wget https://github.com/iqtree/iqtree2/releases/download/v2.1.2/iqtree-2.1.2-Linux.tar.gz
+#+end_src
+
+Make sure that you have permission to execute the file (=chmod +x=), and that
+the executable is in your =PATH= (or that you provide the path during execution).
+#+name: IqTree2-ManualInstall
+#+begin_src sh :exports code :eval never 
+tar -xzvf iqtree-2.1.2-Linux.tar.gz
+chmod +x iqtree-2.1.2-Linux/bin/iqtree2  # Should not be necessary, but who knows.
+mv iqtree-2.1.2-Linux/bin/iqtree2 ~/bin/ # If ~/bin is in your PATH.
+#+end_src
+
+* Preparation - Test IQ-TREE2 version
 Depending on how you installed IQ-TREE2, please check that the version agrees
 with the one I am using.
 
-#+name: IqTree2Version
+#+name: IqTree2-Version
 #+begin_src sh :exports both :results output verbatim replace
 iqtree2 --version
 # /path/to/iqtree2 --version
 # ./relative/path/to/iqtree2 --version
 #+end_src
 
-#+RESULTS: IqTree2Version
+#+RESULTS: IqTree2-Version
 : IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
 : Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
 : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 : 
 
 * Exercise - IQ-TREE2: Access help
-- How to get help (IQ-TREE).
+A convenient way to access the help is
+#+name: IqTree2-Help
+#+begin_src sh :exports code :eval never
+iqtree2 --help | less
+#+end_src
+
+Here I print the first lines:
+#+name: IqTree2-HelpFirstLines
+#+begin_src sh :exports results :results verbatim 
+iqtree2 --help | head -n 10
+#+end_src
+
+#+RESULTS: IqTree2-HelpFirstLines
+#+begin_example
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Usage: iqtree [-s ALIGNMENT] [-p PARTITION] [-m MODEL] [-t TREE] ...
+
+GENERAL OPTIONS:
+  -h, --help           Print (more) help usages
+  -s FILE[,...,FILE]   PHYLIP/FASTA/NEXUS/CLUSTAL/MSF alignment file(s)
+  -s DIR               Directory of alignment files
+#+end_example
 
 * Exercise - Run a DNA substitution model
 - Run normal model.
@@ -173,6 +208,11 @@ iqtree2 -nt 4 -redo -s data/fruit_flies_1000.cf -m HKY+P+N9 -pre fruit_flies_100
 
 - Probably provide results for the 10k alignment (different N, different G, with
   bootstrapping?).
+
+* Tips
+Numerical underflow: The likelihood derivate is zero or close to zero; this is
+especially an issue when N is large; try using =-safe= (which is slower).
+Sometimes, retrying with a different seed also fixes the problem.
 
 * Literature
 :PROPERTIES:
