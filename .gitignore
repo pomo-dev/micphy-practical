@@ -1,4 +1,13 @@
+# We use .org, so don't save the tex file.
 *.tex
+
+# IQ-TREE output.
+*.bionj
+*.ckp.gz
+*.iqtree
+*.mldist
+*.parstree
+*.treefile
 
 # Created by https://www.toptal.com/developers/gitignore/api/latex
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex
