@@ -71,10 +71,13 @@ unzip master.zip
 cd micphy-workshop-master
 #+end_src
 
-The advantage of Option 1 is that you can update your working tree using =git
-pull= (if I have to change something during the workshop).
+The advantage of Option 1 is that you can:
+- update your working tree using =git pull= (if I have to change something
+  during the workshop);
+- reset to the initial state in case you mess something up with =git reset
+  --hard HEAD= (be careful, this erases all uncommited changes made by you).
 
-* Preparation - Installation of IQ-TREE2
+* Preparation - IQ-TREE2: Installation
 Option 1: Repository of your Linux distribution. For example, using Arch Linux
 and the Arch User Repository.
 #+name: IqTree2InstallFromRepository
@@ -94,7 +97,7 @@ iqtree2 --version
 ./relative/path/to/iqtree2 --version
 #+end_src
 
-* Preparation - Installation of IQ-TREE2
+* Preparation - IQ-TREE2: Installation
 Option 3: Compile yourself (not shown).
 #+beamer: \vspace{2ex}
 
@@ -115,7 +118,7 @@ nix-shell
 : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 : 
 
-* Preparation - Test IQ-TREE2 version
+* Preparation - IQ-TREE2: Test version
 Depending on how you installed IQ-TREE2, please check that the version agrees
 with the one I am using.
 
@@ -132,18 +135,44 @@ iqtree2 --version
 : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 : 
 
-* Exercise - How to get help
+* Exercise - IQ-TREE2: Access help
 - How to get help (IQ-TREE).
 
 * Exercise - Run a DNA substitution model
 - Run normal model.
 
+* Fruit fly data
+Data from [[https://popfly.uab.cat][PopFly]][fn:1]. 9 populations with an average number of samples per
+population of approximately 19, and an estimated heterozygosity of 0.0109:
+- NTH :: Netherlands
+- EG :: Egypt
+- FR :: France
+- GA :: Gabon
+- GU :: Guinea
+- EF :: Ethiopia
+- KN :: Kenyia
+- SB :: South Africa (Barkly East)
+- SP :: South Africa (Phalaborwa)
+ 
+/Why is it important to check the heterozygosity?/
+
 * Exercise - Run PoMo
+#+name: IqTree2Run
+#+begin_src sh :exports code :eval query 
+iqtree2 -nt 4 -redo -s data/fruit_flies_1000.cf -m HKY+P+N9 -pre fruit_flies_1000.cf.N9
+#+end_src
+
 - Run PoMo.
 - Find best N.
 - Compare different DNA substitution models.
 - Use gamma rate heterogeneity.
 - Probably perform model test?
+- Bootstrapping.
+- Compare branch lengths for different N values.
+- Compare to using normal DNA substitution models.
+
+- Probably provide results for the 10k alignment (different N, different G, with
+  bootstrapping?).
 
 * Literature
 :PROPERTIES:
@@ -163,3 +192,7 @@ iqtree2 --version
 #+begin_export latex
 \printbibliography{}
 #+end_export
+
+* Footnotes
+
+[fn:1] textcite:Hervas2017. 
