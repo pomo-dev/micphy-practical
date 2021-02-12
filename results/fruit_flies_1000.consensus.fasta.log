@@ -1,0 +1,417 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meganeura (AVX2, FMA3, 31 GB RAM)
+Command: iqtree2 -nt 4 -redo -s ../data/fruit_flies_1000.consensus.fasta -B 1000 -pre fruit_flies_1000.consensus.fasta
+Seed:    563833 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Feb 12 10:07:38 2021
+Kernel:  AVX+FMA - 4 threads (16 CPU cores detected)
+
+Reading alignment file ../data/fruit_flies_1000.consensus.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 9 sequences with 1000 columns, 11 distinct patterns
+5 parsimony-informative, 3 singleton sites, 992 constant sites
+     Gap/Ambiguity  Composition  p-value
+   1  NTH    0.00%    passed     99.65%
+   2  EG     0.00%    passed     99.98%
+   3  FR     0.00%    passed     99.80%
+   4  GA     0.00%    passed     99.93%
+   5  GU     0.00%    passed     99.97%
+   6  EF     0.00%    passed     99.98%
+   7  KN     0.00%    passed     99.99%
+   8  SB     0.00%    passed     99.98%
+   9  SP     0.00%    passed     99.99%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: SP is identical to KN but kept for subsequent analysis
+
+WARNING: 4 threads for alignment length 11 will slow down analysis
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -1450.862
+Optimal log-likelihood: -1450.718
+Rate parameters:  A-C: 1.51638  A-G: 1.67355  A-T: 0.92848  C-G: 0.00010  C-T: 0.68851  G-T: 1.00000
+Base frequencies:  A: 0.289  C: 0.200  G: 0.209  T: 0.301
+Proportion of invariable sites: 0.498
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.002 sec)
+Time for fast ML tree search: 0.005 seconds
+
+NOTE: ModelFinder requires 0 MB RAM!
+ModelFinder will test up to 286 DNA models (sample size: 1000) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+WARNING: 4 threads for alignment length 11 will slow down analysis
+  1  GTR+F         1454.611     23  2955.222     2956.353     3068.100
+WARNING: 4 threads for alignment length 11 will slow down analysis
+  2  GTR+F+I       1448.559     24  2945.118     2946.349     3062.904
+WARNING: 4 threads for alignment length 11 will slow down analysis
+  3  GTR+F+G4      1451.907     24  2951.813     2953.044     3069.599
+WARNING: 4 threads for alignment length 11 will slow down analysis
+  4  GTR+F+I+G4    1450.652     25  2951.304     2952.639     3073.998
+WARNING: 4 threads for alignment length 11 will slow down analysis
+  5  GTR+F+R2      1453.795     25  2957.590     2958.924     3080.283
+WARNING: 4 threads for alignment length 11 will slow down analysis
+  6  GTR+F+R3      1452.992     27  2959.984     2961.539     3092.493
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 14  SYM           1471.569     20  2983.138     2983.996     3081.293
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 15  SYM+I         1465.467     21  2972.934     2973.879     3075.997
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 16  SYM+G4        1468.881     21  2979.762     2980.707     3082.825
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 27  TVM+F         1455.115     22  2954.230     2955.266     3062.200
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 28  TVM+F+I       1448.698     23  2943.396     2944.527     3056.274
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 29  TVM+F+G4      1452.403     23  2950.807     2951.938     3063.685
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 40  TVMe          1472.096     19  2982.192     2982.968     3075.439
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 41  TVMe+I        1465.640     20  2971.281     2972.139     3069.436
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 42  TVMe+G4       1469.386     20  2978.773     2979.631     3076.928
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 53  TIM3+F        1455.726     21  2953.452     2954.397     3056.515
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 54  TIM3+F+I      1449.695     22  2943.390     2944.426     3051.361
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 55  TIM3+F+G4     1453.043     22  2950.086     2951.122     3058.057
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 66  TIM3e         1472.789     18  2981.579     2982.276     3069.918
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 67  TIM3e+I       1466.717     19  2971.435     2972.211     3064.682
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 68  TIM3e+G4      1470.105     19  2978.210     2978.986     3071.458
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 79  TIM2+F        1455.691     21  2953.382     2954.327     3056.445
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 80  TIM2+F+I      1449.581     22  2943.161     2944.197     3051.132
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 81  TIM2+F+G4     1453.003     22  2950.005     2951.041     3057.976
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 92  TIM2e         1472.766     18  2981.532     2982.229     3069.872
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 93  TIM2e+I       1466.629     19  2971.257     2972.033     3064.504
+WARNING: 4 threads for alignment length 11 will slow down analysis
+ 94  TIM2e+G4      1470.075     19  2978.149     2978.925     3071.396
+WARNING: 4 threads for alignment length 11 will slow down analysis
+105  TIM+F         1455.373     21  2952.746     2953.691     3055.809
+WARNING: 4 threads for alignment length 11 will slow down analysis
+106  TIM+F+I       1449.331     22  2942.661     2943.697     3050.632
+WARNING: 4 threads for alignment length 11 will slow down analysis
+107  TIM+F+G4      1452.690     22  2949.381     2950.417     3057.352
+WARNING: 4 threads for alignment length 11 will slow down analysis
+118  TIMe          1472.625     18  2981.250     2981.947     3069.589
+WARNING: 4 threads for alignment length 11 will slow down analysis
+119  TIMe+I        1466.552     19  2971.103     2971.879     3064.351
+WARNING: 4 threads for alignment length 11 will slow down analysis
+120  TIMe+G4       1469.936     19  2977.871     2978.647     3071.119
+WARNING: 4 threads for alignment length 11 will slow down analysis
+131  TPM3u+F       1456.247     20  2952.494     2953.352     3050.649
+WARNING: 4 threads for alignment length 11 will slow down analysis
+132  TPM3u+F+I     1449.836     21  2941.673     2942.618     3044.736
+WARNING: 4 threads for alignment length 11 will slow down analysis
+133  TPM3u+F+G4    1453.541     21  2949.082     2950.027     3052.145
+WARNING: 4 threads for alignment length 11 will slow down analysis
+144  TPM3+F        1456.247     20  2952.494     2953.352     3050.649
+WARNING: 4 threads for alignment length 11 will slow down analysis
+145  TPM3+F+I      1449.836     21  2941.672     2942.617     3044.735
+WARNING: 4 threads for alignment length 11 will slow down analysis
+146  TPM3+F+G4     1453.541     21  2949.082     2950.027     3052.145
+WARNING: 4 threads for alignment length 11 will slow down analysis
+157  TPM2u+F       1456.209     20  2952.419     2953.277     3050.574
+WARNING: 4 threads for alignment length 11 will slow down analysis
+158  TPM2u+F+I     1449.703     21  2941.406     2942.351     3044.469
+WARNING: 4 threads for alignment length 11 will slow down analysis
+159  TPM2u+F+G4    1453.499     21  2948.998     2949.943     3052.061
+WARNING: 4 threads for alignment length 11 will slow down analysis
+170  TPM2+F        1456.211     20  2952.422     2953.280     3050.577
+WARNING: 4 threads for alignment length 11 will slow down analysis
+171  TPM2+F+I      1449.702     21  2941.405     2942.350     3044.468
+WARNING: 4 threads for alignment length 11 will slow down analysis
+172  TPM2+F+G4     1453.500     21  2948.999     2949.944     3052.062
+WARNING: 4 threads for alignment length 11 will slow down analysis
+183  K3Pu+F        1455.894     20  2951.789     2952.647     3049.944
+WARNING: 4 threads for alignment length 11 will slow down analysis
+184  K3Pu+F+I      1449.469     21  2940.938     2941.883     3044.001
+WARNING: 4 threads for alignment length 11 will slow down analysis
+185  K3Pu+F+G4     1453.188     21  2948.376     2949.320     3051.438
+WARNING: 4 threads for alignment length 11 will slow down analysis
+196  K3P           1473.147     17  2980.295     2980.918     3063.727
+WARNING: 4 threads for alignment length 11 will slow down analysis
+197  K3P+I         1466.715     18  2969.429     2970.127     3057.769
+WARNING: 4 threads for alignment length 11 will slow down analysis
+198  K3P+G4        1470.440     18  2976.880     2977.577     3065.220
+WARNING: 4 threads for alignment length 11 will slow down analysis
+209  TN+F          1455.780     20  2951.561     2952.419     3049.716
+WARNING: 4 threads for alignment length 11 will slow down analysis
+210  TN+F+I        1449.726     21  2941.451     2942.396     3044.514
+WARNING: 4 threads for alignment length 11 will slow down analysis
+211  TN+F+G4       1453.098     21  2948.195     2949.140     3051.258
+WARNING: 4 threads for alignment length 11 will slow down analysis
+222  TNe           1472.958     17  2979.916     2980.539     3063.348
+WARNING: 4 threads for alignment length 11 will slow down analysis
+223  TNe+I         1466.879     18  2969.758     2970.455     3058.097
+WARNING: 4 threads for alignment length 11 will slow down analysis
+224  TNe+G4        1470.273     18  2976.547     2977.244     3064.886
+WARNING: 4 threads for alignment length 11 will slow down analysis
+235  HKY+F         1456.302     19  2950.603     2951.379     3043.851
+WARNING: 4 threads for alignment length 11 will slow down analysis
+236  HKY+F+I       1449.859     20  2939.718     2940.576     3037.874
+WARNING: 4 threads for alignment length 11 will slow down analysis
+237  HKY+F+G4      1453.595     20  2947.189     2948.047     3045.344
+WARNING: 4 threads for alignment length 11 will slow down analysis
+248  K2P           1473.486     16  2978.973     2979.526     3057.497
+WARNING: 4 threads for alignment length 11 will slow down analysis
+249  K2P+I         1467.040     17  2968.079     2968.702     3051.511
+WARNING: 4 threads for alignment length 11 will slow down analysis
+250  K2P+G4        1470.779     17  2975.558     2976.181     3058.990
+WARNING: 4 threads for alignment length 11 will slow down analysis
+261  F81+F         1456.423     18  2948.845     2949.542     3037.185
+WARNING: 4 threads for alignment length 11 will slow down analysis
+262  F81+F+I       1449.987     19  2937.974     2938.750     3031.221
+WARNING: 4 threads for alignment length 11 will slow down analysis
+263  F81+F+G4      1453.716     19  2945.432     2946.208     3038.679
+WARNING: 4 threads for alignment length 11 will slow down analysis
+274  JC            1473.583     15  2977.167     2977.654     3050.783
+WARNING: 4 threads for alignment length 11 will slow down analysis
+275  JC+I          1467.139     16  2966.278     2966.831     3044.802
+WARNING: 4 threads for alignment length 11 will slow down analysis
+276  JC+G4         1470.876     16  2973.753     2974.306     3052.277
+Akaike Information Criterion:           F81+F+I
+Corrected Akaike Information Criterion: F81+F+I
+Bayesian Information Criterion:         F81+F+I
+Best-fit model: F81+F+I chosen according to BIC
+
+All model information printed to fruit_flies_1000.consensus.fasta.model.gz
+CPU time for ModelFinder: 0.328 seconds (0h:0m:0s)
+Wall-clock time for ModelFinder: 0.085 seconds (0h:0m:0s)
+Generating 1000 samples for ultrafast bootstrap (seed: 563833)...
+WARNING: 4 threads for alignment length 11 will slow down analysis
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1449.987
+Optimal log-likelihood: -1449.987
+Rate parameters:  A-C: 1.00000  A-G: 1.00000  A-T: 1.00000  C-G: 1.00000  C-T: 1.00000  G-T: 1.00000
+Base frequencies:  A: 0.289  C: 0.200  G: 0.209  T: 0.301
+Proportion of invariable sites: 0.982
+Parameters optimization took 1 rounds (0.000 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.000496 sec (of wall-clock time) 0.001460 sec(of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing RapidNJ tree took 0.000106 sec (of wall-clock time) 0.000201 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -1497.011
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.012 second
+Computing log-likelihood of 98 initial trees ... 0.010 seconds
+Current best score: -1449.636
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1449.635
+Iteration 10 / LogL: -1449.987 / Time: 0h:0m:0s
+Iteration 20 / LogL: -1449.987 / Time: 0h:0m:0s
+Finish initializing candidate tree set (20)
+Current best tree score: -1449.635 / CPU time: 0.038
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+BETTER TREE FOUND at iteration 21: -1449.635
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 30 / LogL: -1449.636 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -1449.637 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.447
+Iteration 60 / LogL: -1449.639 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -1449.639 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -1449.639 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 90 / LogL: -1449.637 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.232
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.967
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -1449.640 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 120 / LogL: -1449.637 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 130 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 140 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 150 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.225
+Iteration 160 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 170 / LogL: -1449.635 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 180 / LogL: -1449.638 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 190 / LogL: -1449.638 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 200 / LogL: -1449.635 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.256
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.974
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -1449.638 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 220 / LogL: -1449.638 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 230 / LogL: -1449.635 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 240 / LogL: -1449.637 / Time: 0h:0m:1s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 250 / LogL: -1449.635 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.256
+Iteration 260 / LogL: -1449.638 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 270 / LogL: -1449.638 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 280 / LogL: -1449.637 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 290 / LogL: -1449.638 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 300 / LogL: -1449.636 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.233
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.972
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 310 / LogL: -1449.637 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 320 / LogL: -1449.635 / Time: 0h:0m:1s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 330 / LogL: -1449.637 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 340 / LogL: -1449.639 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 350 / LogL: -1449.635 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.233
+Iteration 360 / LogL: -1449.638 / Time: 0h:0m:2s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1449.635
+Iteration 370 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 380 / LogL: -1449.638 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 390 / LogL: -1449.637 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 400 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.868
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.987
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 410 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 420 / LogL: -1449.989 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 430 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 440 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 450 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.233
+Iteration 460 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 470 / LogL: -1449.637 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 480 / LogL: -1449.635 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 490 / LogL: -1449.639 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 500 / LogL: -1449.638 / Time: 0h:0m:2s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.233
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.970
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 510 / LogL: -1450.982 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 520 / LogL: -1449.639 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 530 / LogL: -1449.990 / Time: 0h:0m:2s (0h:0m:0s left)
+Iteration 540 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 550 / LogL: -1449.639 / Time: 0h:0m:3s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.224
+Iteration 560 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 570 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 580 / LogL: -1449.638 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 590 / LogL: -1449.638 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 600 / LogL: -1449.636 / Time: 0h:0m:3s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.751
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 610 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 620 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 630 / LogL: -1449.636 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 640 / LogL: -1449.990 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 650 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1460.751
+Iteration 660 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 670 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 680 / LogL: -1449.635 / Time: 0h:0m:3s (0h:0m:0s left)
+Iteration 690 / LogL: -1449.639 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 700 / LogL: -1449.638 / Time: 0h:0m:4s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.269
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 710 / LogL: -1449.638 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 720 / LogL: -1449.638 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 730 / LogL: -1449.639 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 740 / LogL: -1449.639 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 750 / LogL: -1449.635 / Time: 0h:0m:4s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.534
+Iteration 760 / LogL: -1449.635 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 770 / LogL: -1449.638 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 780 / LogL: -1449.638 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 790 / LogL: -1449.640 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 800 / LogL: -1453.746 / Time: 0h:0m:4s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.534
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.977
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 810 / LogL: -1449.638 / Time: 0h:0m:4s (0h:0m:0s left)
+Iteration 820 / LogL: -1449.637 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 830 / LogL: -1449.635 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 840 / LogL: -1449.635 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 850 / LogL: -1449.991 / Time: 0h:0m:5s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.534
+Iteration 860 / LogL: -1449.639 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 870 / LogL: -1449.638 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 880 / LogL: -1450.982 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 890 / LogL: -1449.639 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 900 / LogL: -1449.635 / Time: 0h:0m:5s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.534
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 910 / LogL: -1449.635 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 920 / LogL: -1449.637 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 930 / LogL: -1449.990 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 940 / LogL: -1449.635 / Time: 0h:0m:5s (0h:0m:0s left)
+Iteration 950 / LogL: -1449.635 / Time: 0h:0m:6s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.534
+Iteration 960 / LogL: -1449.635 / Time: 0h:0m:6s (0h:0m:0s left)
+Iteration 970 / LogL: -1449.635 / Time: 0h:0m:6s (0h:0m:0s left)
+Iteration 980 / LogL: -1449.638 / Time: 0h:0m:6s (0h:0m:0s left)
+Iteration 990 / LogL: -1449.635 / Time: 0h:0m:6s (0h:0m:0s left)
+Iteration 1000 / LogL: -1449.635 / Time: 0h:0m:6s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1461.534
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.982
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+WARNING: bootstrap analysis did not converge. You should rerun with higher number of iterations (-nm option)
+TREE SEARCH COMPLETED AFTER 1001 ITERATIONS / Time: 0h:0m:6s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1449.635
+Optimal log-likelihood: -1449.635
+Rate parameters:  A-C: 1.00000  A-G: 1.00000  A-T: 1.00000  C-G: 1.00000  C-T: 1.00000  G-T: 1.00000
+Base frequencies:  A: 0.289  C: 0.200  G: 0.209  T: 0.301
+Proportion of invariable sites: 0.982
+Parameters optimization took 1 rounds (0.000 sec)
+BEST SCORE FOUND : -1449.635
+Creating bootstrap support values...
+Split supports printed to NEXUS file fruit_flies_1000.consensus.fasta.splits.nex
+Total tree length: 0.011
+
+Total number of iterations: 1001
+CPU time used for tree search: 25.169 sec (0h:0m:25s)
+Wall-clock time used for tree search: 6.505 sec (0h:0m:6s)
+Total CPU time used: 25.333 sec (0h:0m:25s)
+Total wall-clock time used: 6.548 sec (0h:0m:6s)
+
+Computing bootstrap consensus tree...
+Reading input file fruit_flies_1000.consensus.fasta.splits.nex...
+9 taxa and 127 splits.
+Consensus tree written to fruit_flies_1000.consensus.fasta.contree
+Reading input trees file fruit_flies_1000.consensus.fasta.contree
+Log-likelihood of consensus tree: -1449.649
+
+Analysis results written to: 
+  IQ-TREE report:                fruit_flies_1000.consensus.fasta.iqtree
+  Maximum-likelihood tree:       fruit_flies_1000.consensus.fasta.treefile
+  Likelihood distances:          fruit_flies_1000.consensus.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          fruit_flies_1000.consensus.fasta.splits.nex
+  Consensus tree:                fruit_flies_1000.consensus.fasta.contree
+  Screen log file:               fruit_flies_1000.consensus.fasta.log
+
+Date and Time: Fri Feb 12 10:07:45 2021

@@ -1,0 +1,201 @@
+IQ-TREE 2.1.2 COVID-edition built Oct 22 2020
+
+Input file name: ../data/fruit_flies_1000.random.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 569652
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 9 sequences with 1000 nucleotide sites
+Number of constant sites: 980 (= 98% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 980 (= 98% of all sites)
+Number of parsimony informative sites: 12
+Number of distinct site patterns: 23
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: HKY+F+I
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+HKY+F+I           -1575.674    3191.348 +     0.21    3192.206 +     0.22    3289.503 +    0.745
+F81+F+I           -1581.451    3200.903 -  0.00177    3201.678 -  0.00193    3294.150 +    0.073
+TN+F+I            -1575.184    3192.367 +    0.126    3193.312 +    0.127    3295.430 -   0.0385
+K3Pu+F+I          -1575.204    3192.408 +    0.124    3193.353 +    0.124    3295.471 -   0.0377
+TPM3+F+I          -1575.556    3193.112 +   0.0871    3194.056 +   0.0873    3296.175 -   0.0265
+TPM3u+F+I         -1575.556    3193.112 +   0.0871    3194.057 +   0.0873    3296.175 -   0.0265
+TPM2+F+I          -1575.670    3193.340 +   0.0777    3194.284 +   0.0779    3296.403 -   0.0237
+TPM2u+F+I         -1575.670    3193.340 +   0.0777    3194.284 +   0.0779    3296.403 -   0.0237
+TIM+F+I           -1574.710    3193.420 +   0.0747    3194.456 +   0.0715    3301.391 -  0.00195
+TIM3+F+I          -1575.069    3194.137 +   0.0522    3195.173 -   0.0499    3302.108 -  0.00137
+TIM2+F+I          -1575.183    3194.365 -   0.0466    3195.401 -   0.0446    3302.336 -  0.00122
+K2P+I             -1593.635    3221.270 - 6.69e-08    3221.893 - 7.88e-08    3304.702 - 0.000373
+TVM+F+I           -1574.972    3195.944 -   0.0211    3197.075 -   0.0193    3308.822 - 4.76e-05
+JC+I              -1599.430    3230.859 - 5.54e-10    3231.413 - 6.75e-10    3309.384 - 3.59e-05
+K3P+I             -1593.159    3222.317 - 3.97e-08    3223.014 -  4.5e-08    3310.657 -  1.9e-05
+TNe+I             -1593.180    3222.360 - 3.88e-08    3223.058 -  4.4e-08    3310.700 - 1.86e-05
+GTR+F+I           -1574.484    3196.968 -   0.0127    3198.199 -    0.011    3314.754 - 2.45e-06
+TIMe+I            -1592.706    3223.413 - 2.29e-08    3224.188 -  2.5e-08    3316.660 - 9.45e-07
+TIM3e+I           -1592.735    3223.470 - 2.23e-08    3224.245 - 2.43e-08    3316.717 - 9.18e-07
+TIM2e+I           -1593.122    3224.244 - 1.51e-08    3225.020 - 1.65e-08    3317.491 - 6.23e-07
+TVMe+I            -1592.478    3224.956 - 1.06e-08    3225.814 - 1.11e-08    3323.111 - 3.75e-08
+SYM+I             -1592.064    3226.128 -  5.9e-09    3227.073 - 5.91e-09    3329.191 -  1.8e-09
+GTR+F+R3          -1574.750    3203.501 - 0.000483    3205.056 - 0.000357    3336.010 - 5.94e-11
+GTR+F+I+G4        -1581.691    3213.381 - 3.46e-06    3214.716 - 2.85e-06    3336.075 - 5.75e-11
+GTR+F+G4          -1588.189    3224.378 - 1.42e-08    3225.609 - 1.23e-08    3342.164 - 2.74e-12
+GTR+F+R4          -1574.753    3207.506 - 6.52e-05    3209.300 - 4.27e-05    3349.831 - 5.92e-14
+GTR+F             -1601.668    3249.336 - 5.39e-14    3250.467 - 4.92e-14    3362.214 - 1.21e-16
+GTR+F+R2          -1596.925    3243.850 - 8.37e-13    3245.184 -  6.9e-13    3366.543 - 1.39e-17
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: HKY+F+I
+
+Rate parameter R:
+
+  A-C: 1.0000
+  A-G: 3.9388
+  A-T: 1.0000
+  C-G: 1.0000
+  C-T: 3.9388
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2889
+  pi(C) = 0.2008
+  pi(G) = 0.2088
+  pi(T) = 0.3016
+
+Rate matrix Q:
+
+  A   -0.9123    0.1383    0.5663    0.2077
+  C     0.199    -1.161    0.1438     0.818
+  G    0.7836    0.1383     -1.13    0.2077
+  T     0.199    0.5446    0.1438   -0.8873
+
+Model of rate heterogeneity: Invar
+Proportion of invariable sites: 0.9694
+
+ Category  Relative_rate  Proportion
+  0         0              0.9694
+  1         32.72          0.03056
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1574.8040 (s.e. 42.6076)
+Unconstrained log-likelihood (without tree): -1497.9124
+Number of free parameters (#branches + #model parameters): 20
+Akaike information criterion (AIC) score: 3189.6079
+Corrected Akaike information criterion (AICc) score: 3190.4659
+Bayesian information criterion (BIC) score: 3287.7630
+
+Total tree length (sum of branch lengths): 0.0339
+Sum of internal branch lengths: 0.0090 (26.5408% of tree length)
+
+WARNING: 1 near-zero internal branches (<0.0010) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'NTH' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**NTH
+|
+|         +------------------------EG
++---------| (47)
+|         |    +-------------FR
+|         +----| (11)
+|              |          +**GU
+|              +----------| (52)
+|                         +-------------------------------SB
+|
+|                +---GA
+|             +**| (50)
+|             |  +--------------KN
+|        +----| (57)
+|        |    +--------------EF
++--------| (61)
+         +--------SP
+
+Tree in newick format:
+
+(NTH:0.0000010000,(EG:0.0055217230,(FR:0.0029979849,(GU:0.0000010000,SB:0.0069433760)52:0.0024237751)11:0.0011365368)47:0.0022637548,(((GA:0.0010110282,KN:0.0032301496)50:0.0000010000,EF:0.0031927721)57:0.0010724373,SP:0.0020287958)61:0.0021089175);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -1575.442528
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--NTH
+|
+|               +---------------------------EG
+|           +---| (28)
+|           |   +-------------------FR
++-----------| (47)
+|           |            +----GU
+|           +------------| (52)
+|                        +--------------------------------SB
+|
+|                    +----GA
+|                 +--| (50)
+|                 |  +-----------------KN
+|           +-----| (57)
+|           |     +-----------------EF
++-----------| (61)
+            +----------SP
+
+
+Consensus tree in newick format: 
+
+(NTH:0.0000029525,((EG:0.0049473141,FR:0.0034908898)28:0.0007208388,(GU:0.0009037643,SB:0.0057817914)52:0.0023617882)47:0.0022131517,(((GA:0.0010002735,KN:0.0031972095)50:0.0000029525,EF:0.0031599395)57:0.0010613324,SP:0.0020096189)61:0.0020871686);
+
+TIME STAMP
+----------
+
+Date and time: Fri Feb 12 10:07:40 2021
+Total CPU time used: 6.234315 seconds (0h:0m:6s)
+Total wall-clock time used: 1.650908232 seconds (0h:0m:1s)
+

@@ -1,0 +1,197 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meganeura (AVX2, FMA3, 31 GB RAM)
+Command: iqtree2 -nt 4 -redo -s ../data/fruit_flies_10000.consensus.fasta -B 1000 -pre fruit_flies_10000.consensus.fasta
+Seed:    571086 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Feb 12 10:07:38 2021
+Kernel:  AVX+FMA - 4 threads (16 CPU cores detected)
+
+Reading alignment file ../data/fruit_flies_10000.consensus.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 9 sequences with 10000 columns, 78 distinct patterns
+48 parsimony-informative, 34 singleton sites, 9918 constant sites
+     Gap/Ambiguity  Composition  p-value
+   1  NTH    0.00%    passed    100.00%
+   2  EG     0.00%    passed     99.98%
+   3  FR     0.00%    passed    100.00%
+   4  GA     0.00%    passed     99.96%
+   5  GU     0.00%    passed     99.97%
+   6  EF     0.00%    passed     99.91%
+   7  KN     0.00%    passed     99.97%
+   8  SB     0.00%    passed    100.00%
+   9  SP     0.00%    passed    100.00%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -14820.556
+Optimal log-likelihood: -14820.351
+Rate parameters:  A-C: 0.76538  A-G: 1.45473  A-T: 0.66590  C-G: 0.36422  C-T: 1.75304  G-T: 1.00000
+Base frequencies:  A: 0.282  C: 0.216  G: 0.220  T: 0.282
+Proportion of invariable sites: 0.502
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.003 sec)
+Time for fast ML tree search: 0.014 seconds
+
+NOTE: ModelFinder requires 0 MB RAM!
+ModelFinder will test up to 286 DNA models (sample size: 10000) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  1  GTR+F         14915.370    23  29876.741    29876.851    30042.578
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  2  GTR+F+I       14738.621    24  29525.242    29525.363    29698.290
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  3  GTR+F+G4      14851.947    24  29751.895    29752.015    29924.943
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  4  GTR+F+I+G4    14785.417    25  29620.835    29620.965    29801.093
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  5  GTR+F+R2      14739.162    25  29528.324    29528.454    29708.582
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+  6  GTR+F+R3      14739.060    27  29532.120    29532.271    29726.799
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 15  SYM+I         14820.318    21  29682.636    29682.729    29834.054
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 28  TVM+F+I       14739.659    23  29525.319    29525.430    29691.157
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 41  TVMe+I        14821.162    20  29682.325    29682.409    29826.532
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 54  TIM3+F+I      14740.801    22  29525.601    29525.703    29684.229
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 67  TIM3e+I       14822.952    19  29683.904    29683.980    29820.900
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 80  TIM2+F+I      14741.200    22  29526.400    29526.501    29685.027
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+ 93  TIM2e+I       14823.867    19  29685.734    29685.810    29822.730
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+106  TIM+F+I       14739.737    22  29523.475    29523.576    29682.102
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+119  TIMe+I        14822.858    19  29683.716    29683.792    29820.712
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+132  TPM3u+F+I     14741.804    21  29525.609    29525.701    29677.026
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+145  TPM3+F+I      14741.804    21  29525.609    29525.701    29677.026
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+158  TPM2u+F+I     14742.225    21  29526.449    29526.542    29677.866
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+171  TPM2+F+I      14742.225    21  29526.449    29526.542    29677.866
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+184  K3Pu+F+I      14740.766    21  29523.531    29523.624    29674.949
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+197  K3P+I         14823.680    18  29683.359    29683.428    29813.146
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+210  TN+F+I        14741.288    21  29524.576    29524.669    29675.993
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+223  TNe+I         14824.260    18  29684.519    29684.588    29814.306
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+236  HKY+F+I       14742.304    20  29524.608    29524.693    29668.815
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+249  K2P+I         14825.089    17  29684.179    29684.240    29806.755
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+262  F81+F+I       14753.174    19  29544.348    29544.424    29681.345
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+275  JC+I          14835.666    16  29703.333    29703.387    29818.698
+Akaike Information Criterion:           TIM+F+I
+Corrected Akaike Information Criterion: TIM+F+I
+Bayesian Information Criterion:         HKY+F+I
+Best-fit model: HKY+F+I chosen according to BIC
+
+All model information printed to fruit_flies_10000.consensus.fasta.model.gz
+CPU time for ModelFinder: 2.631 seconds (0h:0m:2s)
+Wall-clock time for ModelFinder: 0.910 seconds (0h:0m:0s)
+Generating 1000 samples for ultrafast bootstrap (seed: 571086)...
+
+NOTE: 0 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -14742.304
+Optimal log-likelihood: -14742.304
+Rate parameters:  A-C: 1.00000  A-G: 2.41935  A-T: 1.00000  C-G: 1.00000  C-T: 2.41935  G-T: 1.00000
+Base frequencies:  A: 0.282  C: 0.216  G: 0.220  T: 0.282
+Proportion of invariable sites: 0.988
+Parameters optimization took 1 rounds (0.000 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.000415 sec (of wall-clock time) 0.001243 sec(of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing RapidNJ tree took 0.000102 sec (of wall-clock time) 0.000203 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -14772.806
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.024 second
+Computing log-likelihood of 90 initial trees ... 0.024 seconds
+Current best score: -14742.304
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -14742.214
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -14741.880
+Iteration 10 / LogL: -14742.218 / Time: 0h:0m:0s
+Iteration 20 / LogL: -14742.390 / Time: 0h:0m:0s
+Finish initializing candidate tree set (5)
+Current best tree score: -14741.880 / CPU time: 0.104
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -14741.880
+Iteration 30 / LogL: -14742.386 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -14742.372 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -14742.348 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -14762.256
+Iteration 60 / LogL: -14742.215 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -14742.217 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -14741.883 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -14744.291 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -14742.345 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -14763.016
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 105 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -14741.880
+Optimal log-likelihood: -14741.880
+Rate parameters:  A-C: 1.00000  A-G: 2.40689  A-T: 1.00000  C-G: 1.00000  C-T: 2.40689  G-T: 1.00000
+Base frequencies:  A: 0.282  C: 0.216  G: 0.220  T: 0.282
+Proportion of invariable sites: 0.988
+Parameters optimization took 1 rounds (0.000 sec)
+BEST SCORE FOUND : -14741.880
+Creating bootstrap support values...
+Split supports printed to NEXUS file fruit_flies_10000.consensus.fasta.splits.nex
+Total tree length: 0.014
+
+Total number of iterations: 105
+CPU time used for tree search: 2.739 sec (0h:0m:2s)
+Wall-clock time used for tree search: 0.690 sec (0h:0m:0s)
+Total CPU time used: 2.856 sec (0h:0m:2s)
+Total wall-clock time used: 0.722 sec (0h:0m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file fruit_flies_10000.consensus.fasta.splits.nex...
+9 taxa and 67 splits.
+Consensus tree written to fruit_flies_10000.consensus.fasta.contree
+Reading input trees file fruit_flies_10000.consensus.fasta.contree
+Log-likelihood of consensus tree: -14742.600
+
+Analysis results written to: 
+  IQ-TREE report:                fruit_flies_10000.consensus.fasta.iqtree
+  Maximum-likelihood tree:       fruit_flies_10000.consensus.fasta.treefile
+  Likelihood distances:          fruit_flies_10000.consensus.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          fruit_flies_10000.consensus.fasta.splits.nex
+  Consensus tree:                fruit_flies_10000.consensus.fasta.contree
+  Screen log file:               fruit_flies_10000.consensus.fasta.log
+
+Date and Time: Fri Feb 12 10:07:40 2021
