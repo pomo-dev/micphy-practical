@@ -15,8 +15,8 @@ ns = ["03", "05", "07", "09", "15", "19"]
 
 treefiles :: [String]
 treefiles =
-  "fruit_flies_10000.consensus.fasta.treefile" :
-  "fruit_flies_10000.random.fasta.treefile" :
+  "fruit_flies_10000.consensus.fasta.HKY+F+G4.treefile" :
+  "fruit_flies_10000.random.fasta.HKY+F+G4.treefile" :
     ["fruit_flies_10000.cf.HKY+F+P+N" <> n <> "+G4.treefile" | n <- ns]
 
 externalBranches :: Tree e a -> [e]

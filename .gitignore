@@ -1,5 +1,6 @@
 # We use .org, so don't save the tex file.
 *.tex
+/svg-inkscape/**
 
 # # IQ-TREE output.
 # *.bionj

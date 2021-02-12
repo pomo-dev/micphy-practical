@@ -13,7 +13,7 @@
 
 #+startup: beamer
 #+latex_class: myPresentation
-#+latex_class_options: [aspectratio=169,minted]
+#+latex_class_options: [aspectratio=169,minted,svg]
 #+latex_header: \addbibresource{~/Evolutionary-Biology/Bibliography/bibliography.bib}
 #+latex_header_extra: \titlegraphic{\includegraphics[width=10em]{logos/elte}}
 #+latex_compiler: unused; see `org-latex-pdf-process'
@@ -23,6 +23,24 @@
 #+description:
 #+keywords:
 #+options: H:1
+
+#+property: header-args:ipython :session PoMo-Workshop
+
+#+name: Imports
+#+begin_src ipython :exports code :results none
+import numpy as np
+import pandas as pd
+import scipy as sp
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sb
+
+sb.set()
+sb.set_style("ticks", {"axes.grid": True})
+sb.set_context("notebook")
+%config InlineBackend.figure_format = 'svg'
+#+end_src
 
 * Introduction
 This workshop is [[https://github.com/pomo-dev/micphy-workshop][available on GitHub]].
@@ -314,7 +332,32 @@ f=fruit_flies_1000.cf; m="HKY+F+P+N09+G2"; iqtree2 -nt 4 -redo -s $f -m $m -pre 
 * Results
 Results are provided in the =./results= folder.
 
-PROVIDE ONE GRAPH WITH BRANCH LENGTHS. Probably external vs internal.
+#+name: BranchLengths
+#+begin_src ipython :ipyfile PoMo-Workshop-BranchLengths.svg :exports none :results none
+cons = 0.7599011228524519
+rand = 0.8775802706667841
+ns = [3, 5, 7, 9, 15, 19]
+pomo = [0.8314274618935616,
+        0.7883771094980733,
+        0.761713398934836,
+        0.7412203731641129,
+        0.7004304607585186,
+        0.6781954389006495]
+
+plt.plot(1, cons, 'o', label="Consensus")
+plt.plot(1, rand, 'o', label="Random")
+plt.plot(ns, pomo, 'o', label="PoMo")
+plt.legend()
+plt.xlabel("Virtual population size")
+plt.xticks([1,3,5,7,9,15,19])
+plt.xlim([0,20])
+plt.ylabel("External / total branch length")
+plt.ylim([0.6,1])
+#+end_src
+
+#+attr_latex: :width 0.6\textwidth :placement [tb]
+#+label: fig-BranchLengths
+[[file:PoMo-Workshop-BranchLengths.svg]]
 
 * Advice
 Sometimes, the inference is unsuccessful. This may have several reasons. Two of
