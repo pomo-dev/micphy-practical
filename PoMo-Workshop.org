@@ -27,7 +27,7 @@
 #+property: header-args:ipython :session PoMo-Workshop
 
 #+name: Imports
-#+begin_src ipython :exports code :results none
+#+begin_src ipython :exports none :results none
 import numpy as np
 import pandas as pd
 import scipy as sp
@@ -43,7 +43,8 @@ sb.set_context("notebook")
 #+end_src
 
 * Introduction
-This workshop is [[https://github.com/pomo-dev/micphy-workshop][available on GitHub]].
+This workshop is [[https://github.com/pomo-dev/micphy-workshop][available on GitHub]], please also have a look at the
+corresponding [[file:PoMo-Presentation.pdf][workshop presentation]].
 #+beamer: \vspace{2ex}
 
 Our goal is to understand how we can use polymorphism-aware phylogenetic models
@@ -329,8 +330,8 @@ f=fruit_flies_1000.cf; m="HKY+F+P+N09+G2"; iqtree2 -nt 4 -redo -s $f -m $m -pre 
 - How do your results compare to using normal DNA substitution models. For a
   fair comparison, you have to run PoMo on the proper data with 10k sites.
 
-* Results
-Results are provided in the =./results= folder.
+* Some results
+Inference results are provided in the =./results= folder.
 
 #+name: BranchLengths
 #+begin_src ipython :ipyfile PoMo-Workshop-BranchLengths.svg :exports none :results none
