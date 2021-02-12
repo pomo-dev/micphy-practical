@@ -129,10 +129,18 @@ chmod +x iqtree-2.1.2-Linux/bin/iqtree2  # Should not be necessary, but who know
 mv iqtree-2.1.2-Linux/bin/iqtree2 ~/bin/ # If ~/bin is in your PATH.
 #+end_src
 
-* Preparation - Test IQ-TREE2 version
-Depending on how you installed IQ-TREE2, please check that the version agrees
-with the one I am using.
+* Exercise - Test IQ-TREE2 version
 
+** IQ-TREE2 version                                              :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+Check that your IQ-TREE2 version agrees with the one I am using.
+
+** Version                                                    :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
 #+name: IqTree2-Version
 #+begin_src sh :exports both :results output verbatim replace
 iqtree2 --version
@@ -146,36 +154,42 @@ iqtree2 --version
 : Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 : 
 
-* Exercise - IQ-TREE2: Access help
-A convenient way to access the help is
+* Exercise - Access IQ-TREE2 help
+
+** IQ-TREE2 help                                                 :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+Access the IQ-TREE2 help, maybe read through some command line flags.
+
+** Help                                                       :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
 #+name: IqTree2-Help
 #+begin_src sh :exports code :eval never
 iqtree2 --help | less
 #+end_src
 
-Here I print the first lines:
 #+name: IqTree2-HelpFirstLines
 #+begin_src sh :exports results :results verbatim 
-iqtree2 --help | head -n 10
+iqtree2 --help | head -n 8
 #+end_src
 
 #+RESULTS: IqTree2-HelpFirstLines
-#+begin_example
-IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
-Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
-Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
-
-Usage: iqtree [-s ALIGNMENT] [-p PARTITION] [-m MODEL] [-t TREE] ...
-
-GENERAL OPTIONS:
-  -h, --help           Print (more) help usages
-  -s FILE[,...,FILE]   PHYLIP/FASTA/NEXUS/CLUSTAL/MSF alignment file(s)
-  -s DIR               Directory of alignment files
-#+end_example
+: IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Jan  1 1980
+: Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+: Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+: 
+: Usage: iqtree [-s ALIGNMENT] [-p PARTITION] [-m MODEL] [-t TREE] ...
+: 
+: GENERAL OPTIONS:
+:   -h, --help           Print (more) help usages
 
 * Fruit fly data
-Data from [[https://popfly.uab.cat][PopFly]][fn:1]. 9 populations with an average number of samples per
-population of approximately 19, and an estimated heterozygosity of 0.0109:
+We are going to analyze some fruit fly data. The data comprises nine
+/Drosophila/ populations obtained from [[https://popfly.uab.cat][PopFly]][fn:1].
+
 - NTH :: Netherlands
 - EG :: Egypt
 - FR :: France
@@ -185,29 +199,122 @@ population of approximately 19, and an estimated heterozygosity of 0.0109:
 - KN :: Kenyia
 - SB :: South Africa (Barkly East)
 - SP :: South Africa (Phalaborwa)
- 
-/Why is it important to check the heterozygosity?/
 
-* Exercise - DNA substitution model
-Before running PoMo, we will use a normal DNA substitution model.
+* Exercise - Explore fruit fly data 
 
-* Exercise - Run PoMo
-#+name: IqTree2Run
-#+begin_src sh :exports code :eval query 
-iqtree2 -nt 4 -redo -s data/fruit_flies_1000.cf -m HKY+P+N9 -pre fruit_flies_1000.cf.N9
+** Explore data                                                  :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+Have a look at the data in the =./data= folder.
+
+** Counts files and FASTA files                               :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+#+name: Data-Explore
+#+begin_src sh :exports results :results output 
+ls ./data
 #+end_src
 
-- Run PoMo.
-- Find best N.
-- Compare different DNA substitution models.
-- Use gamma rate heterogeneity.
-- Probably perform model test?
-- Bootstrapping.
-- Compare branch lengths for different N values.
-- Compare to using normal DNA substitution models.
+#+RESULTS: Data-Explore
+: data_description.csv
+: fruit_flies_10000.cf
+: fruit_flies_10000.consensus.fasta
+: fruit_flies_10000.random.fasta
+: fruit_flies_1000.cf
+: fruit_flies_1000.consensus.fasta
+: fruit_flies_1000.random.fasta
 
-- Probably provide results for the 10k alignment (different N, different G, with
-  bootstrapping?).
+We have data of two different lengths (1k and 10k sites), and also in counts
+file and FASTA file formats.
+
+* Exercise - Run DNA substitution model
+Before running PoMo, we will use a normal DNA substitution model.
+
+** DNA substitution model                                        :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+- Infer a phylogenetic tree using a DNA substitution model.
+- Explore the output files. Specifically have a look at the =.log=, the
+  =.iqtree= and the =.treefile= files.
+
+** Run DNA substitution model                                 :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+#+name: IqTree2-DNASubstitutionModel
+#+begin_src sh :exports code :eval never 
+iqtree2 -nt 4 -redo -mredo -s fruit_flies_10000.consensus.fasta -B 1000
+#+end_src
+
+** Questions                                                   :B_exampleblock:
+:PROPERTIES:
+:BEAMER_env: exampleblock
+:END:
+- Which substitution model was used? How was it determined?
+- What is the determined maximum log likelihood?
+- How does the tree look like (topology, bootstrap values, branch lengths)?
+
+* Exercise - Run PoMo I
+** PoMo                                                          :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+- Infer a phylogenetic tree using PoMo.
+- Explore the output files.
+
+** Run PoMO                                                   :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+#+name: IqTree2-PoMo
+#+begin_src sh :exports code :eval never 
+iqtree2 -nt 4 -redo -s fruit_flies_1000.cf -m HKY+F+P -B 1000
+#+end_src
+
+** Questions                                                   :B_exampleblock:
+:PROPERTIES:
+:BEAMER_env: exampleblock
+:END:
+- What is the average number of samples per population? What is the estimated
+  heterozygosity? /Why is it important to check the heterozygosity?/
+- Which virtual population size was used?
+- What is the determined maximum log likelihood?
+- How does the tree look like (topology, bootstrap values, branch lengths)?
+
+* Exercise - Run PoMo II
+** PoMo parameters                                               :B_alertblock:
+:PROPERTIES:
+:BEAMER_env: alertblock
+:END:
+- Play around with different virtual population sizes.
+- Use gamma rate heterogeneity.
+- Compare different DNA substitution models.
+
+** Run PoMo with different parameters                         :B_ignoreheading:
+:PROPERTIES:
+:BEAMER_env: ignoreheading
+:END:
+#+name: IqTree2-PoMoTilde
+#+begin_src sh :exports code :eval never 
+f=fruit_flies_1000.cf; m="HKY+F+P+N09+G2"; iqtree2 -nt 4 -redo -s $f -m $m -pre $f.$m
+#+end_src
+
+** Questions                                                   :B_exampleblock:
+:PROPERTIES:
+:BEAMER_env: exampleblock
+:END:
+- What are the absolute and relative differences between branch lengths for
+  different virtual population sizes?
+- How do your results compare to using normal DNA substitution models. For a
+  fair comparison, you have to run PoMo on the proper data with 10k sites.
+
+* Results
+Results are provided in the =./results= folder.
+
+PROVIDE ONE GRAPH WITH BRANCH LENGTHS. Probably external vs internal.
 
 * Advice
 Sometimes, the inference is unsuccessful. This may have several reasons. Two of
@@ -216,6 +323,7 @@ them are:
   occurs. This is especially an issue when \(N\) is large. Try using =-safe=
   (which is slower).
 - The algorithm diverges. Try repeating the analysis with a different seed.
+#+beamer: \vspace{2ex}
 
 In general, it is recommended to *perform replicate analyses* and compare the
 parameters and log likelihoods. Further, a *good starting tree* can save a lot
@@ -245,4 +353,4 @@ of time and worries.
 
 * Footnotes
 
-[fn:1] textcite:Hervas2017. 
+[fn:1] textcite:Hervas2017; thanks Rui for providing the counts files.
