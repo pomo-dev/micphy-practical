@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Perform inferences with PoMo on the test data (counts file with 1k sites) as
+# well as the proper data (counts file with 10k sites). Use different virtual
+# population sizes (N) and gamma rate categories (G).
+
 FILES=("fruit_flies_1000.cf" "fruit_flies_10000.cf")
 NS=(03 05 07 09 15 19)
 GS=(1 2 4)

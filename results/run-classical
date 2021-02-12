@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Perform inferences with classical DNA substitution models on the short test
+# alignments (1k sites), as well as the proper alignments (10k sites). The
+# alignments have been created from the counts files using two flavors:
+#
+# 1. Consensus; for each site, take the nucleotide having highest frequency.
+#
+# 2. Random; for each site, randomly sample a nucleotide using the counts as
+# weights.
+#
+# We use automated statistical tests to find the most appropriate DNA
+# substitution model.
+
+FILES=("fruit_flies_1000.consensus.fasta"
+       "fruit_flies_1000.random.fasta"
+       "fruit_flies_10000.consensus.fasta"
+       "fruit_flies_10000.random.fasta")
+
+parallel -j 4 iqtree2 -nt 4 -redo -s "../data/${1}" -B 1000 ::: "${FILES[@]}"

@@ -191,7 +191,6 @@ population of approximately 19, and an estimated heterozygosity of 0.0109:
 * Exercise - DNA substitution model
 Before running PoMo, we will use a normal DNA substitution model.
 
-
 * Exercise - Run PoMo
 #+name: IqTree2Run
 #+begin_src sh :exports code :eval query 
