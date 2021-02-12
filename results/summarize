@@ -1,0 +1,42 @@
+#!/usr/bin/env stack
+{- stack
+--resolver nightly-2021-01-17
+script
+--package bytestring
+--package elynx-tree
+--ghc-options -Wall
+-}
+
+import qualified Data.ByteString.Char8 as BS
+import ELynx.Tree
+
+ns :: [String]
+ns = ["03", "05", "07", "09", "15", "19"]
+
+treefiles :: [String]
+treefiles =
+  "fruit_flies_10000.consensus.fasta.treefile" :
+  "fruit_flies_10000.random.fasta.treefile" :
+    ["fruit_flies_10000.cf.HKY+F+P+N" <> n <> "+G4.treefile" | n <- ns]
+
+externalBranches :: Tree e a -> [e]
+externalBranches (Node x _ []) = [x]
+externalBranches (Node _ _ ts) = concatMap externalBranches ts
+
+parseFile :: FilePath -> IO (Tree Length Name)
+parseFile fn = do
+  bs <- BS.readFile fn
+  let tr = parseOneNewick IqTree bs
+  return $ either error id $ phyloToLengthTree tr
+
+-- External branch length divided by total branch length.
+summarizeTree :: Tree Length a -> Double
+summarizeTree t = ext / total
+  where
+    ext = realToFrac $ sum $ externalBranches t
+    total = realToFrac $ sum $ branches t
+
+main :: IO ()
+main = do
+  trs <- mapM parseFile treefiles
+  print $ map summarizeTree trs

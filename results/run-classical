@@ -18,3 +18,6 @@ FILES=("fruit_flies_1000.consensus.fasta"
        "fruit_flies_10000.random.fasta")
 
 parallel -j 4 iqtree2 -nt 4 -redo -s "../data/{1}" -B 1000 -pre {1} ::: "${FILES[@]}"
+
+export m="HKY+F+G4"
+parallel -j 4 iqtree2 -nt 4 -redo -s "../data/{1}" -m $m -pre {}.$m -B 1000 -pre {1} ::: "${FILES[@]}"
