@@ -1,0 +1,121 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    meganeura (AVX2, FMA3, 31 GB RAM)
+Command: iqtree2 -nt 4 -redo -s ../data/fruit_flies_1000.random.fasta -m HKY+F+G4 -B 1000 -pre fruit_flies_1000.random.fasta.HKY+F+G4
+Seed:    353442 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Feb 12 12:55:44 2021
+Kernel:  AVX+FMA - 4 threads (16 CPU cores detected)
+
+Reading alignment file ../data/fruit_flies_1000.random.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 9 sequences with 1000 columns, 23 distinct patterns
+12 parsimony-informative, 8 singleton sites, 980 constant sites
+     Gap/Ambiguity  Composition  p-value
+   1  NTH    0.00%    passed     99.97%
+   2  EG     0.00%    passed     99.35%
+   3  FR     0.00%    passed     99.73%
+   4  GA     0.00%    passed     99.99%
+   5  GU     0.00%    passed    100.00%
+   6  EF     0.00%    passed     99.91%
+   7  KN     0.00%    passed     99.91%
+   8  SB     0.00%    passed     99.82%
+   9  SP     0.00%    passed     99.39%
+****  TOTAL    0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 353442)...
+WARNING: 4 threads for alignment length 23 will slow down analysis
+
+NOTE: 0 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1604.851
+2. Current log-likelihood: -1594.897
+3. Current log-likelihood: -1594.363
+4. Current log-likelihood: -1593.836
+5. Current log-likelihood: -1591.603
+Optimal log-likelihood: -1591.602
+Rate parameters:  A-C: 1.00000  A-G: 3.13567  A-T: 1.00000  C-G: 1.00000  C-T: 3.13567  G-T: 1.00000
+Base frequencies:  A: 0.289  C: 0.201  G: 0.209  T: 0.302
+Gamma shape alpha: 0.020
+Parameters optimization took 5 rounds (0.005 sec)
+Computing ML distances based on estimated model parameters...
+Computing ML distances took 0.000498 sec (of wall-clock time) 0.001438 sec(of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing RapidNJ tree took 0.000135 sec (of wall-clock time) 0.000322 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -1601.563
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.019 second
+Computing log-likelihood of 93 initial trees ... 0.018 seconds
+Current best score: -1590.135
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1590.069
+Iteration 10 / LogL: -1590.071 / Time: 0h:0m:0s
+Iteration 20 / LogL: -1594.188 / Time: 0h:0m:0s
+Finish initializing candidate tree set (6)
+Current best tree score: -1590.069 / CPU time: 0.070
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -1590.070 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1590.069
+Iteration 40 / LogL: -1591.494 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -1590.084 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1609.153
+Iteration 60 / LogL: -1591.492 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -1591.492 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -1590.069
+Iteration 80 / LogL: -1590.069 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -1591.179 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -1590.085 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1609.153
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.994
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1590.069
+Optimal log-likelihood: -1590.069
+Rate parameters:  A-C: 1.00000  A-G: 3.58173  A-T: 1.00000  C-G: 1.00000  C-T: 3.58173  G-T: 1.00000
+Base frequencies:  A: 0.289  C: 0.201  G: 0.209  T: 0.302
+Gamma shape alpha: 0.020
+Parameters optimization took 1 rounds (0.001 sec)
+BEST SCORE FOUND : -1590.069
+Creating bootstrap support values...
+Split supports printed to NEXUS file fruit_flies_1000.random.fasta.HKY+F+G4.splits.nex
+Total tree length: 0.031
+
+Total number of iterations: 102
+CPU time used for tree search: 2.749 sec (0h:0m:2s)
+Wall-clock time used for tree search: 0.807 sec (0h:0m:0s)
+Total CPU time used: 2.937 sec (0h:0m:2s)
+Total wall-clock time used: 0.855 sec (0h:0m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file fruit_flies_1000.random.fasta.HKY+F+G4.splits.nex...
+9 taxa and 76 splits.
+Consensus tree written to fruit_flies_1000.random.fasta.HKY+F+G4.contree
+Reading input trees file fruit_flies_1000.random.fasta.HKY+F+G4.contree
+Log-likelihood of consensus tree: -1591.654
+
+Analysis results written to: 
+  IQ-TREE report:                fruit_flies_1000.random.fasta.HKY+F+G4.iqtree
+  Maximum-likelihood tree:       fruit_flies_1000.random.fasta.HKY+F+G4.treefile
+  Likelihood distances:          fruit_flies_1000.random.fasta.HKY+F+G4.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          fruit_flies_1000.random.fasta.HKY+F+G4.splits.nex
+  Consensus tree:                fruit_flies_1000.random.fasta.HKY+F+G4.contree
+  Screen log file:               fruit_flies_1000.random.fasta.HKY+F+G4.log
+
+Date and Time: Fri Feb 12 12:55:45 2021

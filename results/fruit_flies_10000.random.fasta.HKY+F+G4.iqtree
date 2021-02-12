@@ -1,0 +1,150 @@
+IQ-TREE 2.1.2 COVID-edition built Oct 22 2020
+
+Input file name: ../data/fruit_flies_10000.random.fasta
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 355680
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 9 sequences with 10000 nucleotide sites
+Number of constant sites: 9805 (= 98.05% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 9805 (= 98.05% of all sites)
+Number of parsimony informative sites: 80
+Number of distinct site patterns: 143
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: HKY+F+G4
+
+Rate parameter R:
+
+  A-C: 1.0000
+  A-G: 2.4805
+  A-T: 1.0000
+  C-G: 1.0000
+  C-T: 2.4805
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2814
+  pi(C) = 0.2164
+  pi(G) = 0.2199
+  pi(T) = 0.2824
+
+Rate matrix Q:
+
+  A   -0.9407    0.1949    0.4914    0.2544
+  C    0.2535    -1.083    0.1981     0.631
+  G    0.6287    0.1949    -1.078    0.2544
+  T    0.2535    0.4835    0.1981   -0.9351
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.02004
+
+ Category  Relative_rate  Proportion
+  1         5.058e-31      0.25
+  2         1.064e-15      0.25
+  3         9.778e-07      0.25
+  4         4              0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -16014.8992 (s.e. 150.8862)
+Unconstrained log-likelihood (without tree): -15402.3200
+Number of free parameters (#branches + #model parameters): 20
+Akaike information criterion (AIC) score: 32069.7983
+Corrected Akaike information criterion (AICc) score: 32069.8825
+Bayesian information criterion (BIC) score: 32214.0051
+
+Total tree length (sum of branch lengths): 0.0311
+Sum of internal branch lengths: 0.0038 (12.2420% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'NTH' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----------------NTH
+|
+|     +---------------EG
++-----| (36)
+|     |                   +--------------------GA
+|     |              +----| (30)
+|     |              |    +-----------------------------GU
+|     |           +--| (29)
+|     |           |  +----------------------EF
+|     |      +----| (30)
+|     |      |    +-------------------------------SP
+|     |  +---| (23)
+|     |  |   +-----------------KN
+|     +--| (37)
+|        +----------------------------SB
+|
++-----------------FR
+
+Tree in newick format:
+
+(NTH:0.0024069622,(EG:0.0021521472,(((((GA:0.0027680759,GU:0.0040416101)30:0.0007610757,EF:0.0031009390)29:0.0004909375,SP:0.0042021769)30:0.0006833571,KN:0.0024293964)23:0.0005825564,SB:0.0038331236)37:0.0005043568)36:0.0007893288,FR:0.0023895611);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -16015.319569
+Robinson-Foulds distance between ML tree and consensus tree: 8
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------------NTH
+|
+|   +----------------------EG
++---| (36)
+|   |             +-----------------------GA
+|   |          +--| (32)
+|   |          |  |      +-------------------------------GU
+|   |          |  +------| (36)
+|   |          |         +------------------------------SB
+|   |   +------| (30)
+|   |   |      |    +-------------------------EF
+|   |   |      +----| (37)
+|   |   |           +----------------------------------SP
+|   +---| (37)
+|       +---------------------KN
+|
++--------------------FR
+
+
+Consensus tree in newick format: 
+
+(NTH:0.0023767592,(EG:0.0026356939,(((GA:0.0027971936,(GU:0.0036919152,SB:0.0036447697)36:0.0008465691)32:0.0004055765,(EF:0.0030197447,SP:0.0041137276)37:0.0006777466)30:0.0009026290,KN:0.0025220774)37:0.0005227768)36:0.0005004276,FR:0.0024185173);
+
+TIME STAMP
+----------
+
+Date and time: Fri Feb 12 12:55:45 2021
+Total CPU time used: 3.02396 seconds (0h:0m:3s)
+Total wall-clock time used: 0.7886600494 seconds (0h:0m:0s)
+
